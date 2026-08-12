@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 3</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 12mm 14mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #1e293b; padding-bottom: 6px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 18px; font-weight: 700; color: #1e293b; }
+.doc-header h2 { font-size: 11px; font-weight: 500; color: #475569; margin-top: 2px; }
+.doc-header .badge { font-size: 10px; font-weight: 600; background: #e2e8f0; color: #1e293b; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 11.5px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 4px 8px; border-radius: 4px 4px 0 0; margin-top: 10px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 8px 10px; margin-bottom: 4px; }
+
+/* Blockfarben */
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+table { width: 100%; border-collapse: collapse; }
+table.konj th { background: #374151; color: white; font-size: 10px; font-weight: 700; padding: 3px 5px; text-align: center; border: 0.5px solid #4b5563; }
+table.konj th.pronomen-col { background: #1e3a8a; text-align: left; width: 70px; }
+table.konj td { padding: 2.5px 5px; border: 0.5px solid #e2e8f0; font-size: 10.5px; text-align: center; background: white; }
+table.konj td.pronomen { background: #f1f5f9; font-weight: 700; color: #1e3a8a; text-align: left; font-size: 10px; }
+table.konj tr:nth-child(even) td:not(.pronomen) { background: #f8fafc; }
+table.konj td.irregular { color: #b45309; font-weight: 700; }
+
+.verb-block h4 { font-size: 10.5px; font-weight: 700; color: #1e3a8a; margin-bottom: 3px; }
+.verb-block .tag { display:inline-block; font-size: 9px; font-weight:700; padding: 1px 6px; border-radius: 10px; margin-left: 5px; }
+.tag.irr { background:#fef3c7; color:#92400e; }
+
+.gram-rule { border-left: 3px solid #16a34a; background: white; border-radius: 0 6px 6px 0; padding: 4px 8px; margin-bottom: 5px; font-size: 10.5px; }
+.gram-rule strong { color: #15803d; }
+
+/* Satzbau-Legende */
+.satz-legende { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 7px; font-size: 9.5px; }
+.leg-item { display: flex; align-items: center; gap: 4px; }
+.leg-swatch { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+.sw-subjekt { background: #60a5fa; }
+.sw-verb { background: #f87171; }
+.sw-frage { background: #a78bfa; }
+.sw-erg { background: #4ade80; }
+
+.satzbau-box { display: flex; flex-direction: column; gap: 5px; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 10.5px; }
+.satz-row .cell { padding: 3px 8px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.satz-row .label { min-width: 90px; font-weight: 700; color: #78350f; background: #fef3c7; display:flex; align-items:center; padding: 3px 8px; border: 1px solid #fde68a; }
+.cell.subjekt { background: #bfdbfe; }
+.cell.verb { background: #fecaca; }
+.cell.frage { background: #ddd6fe; }
+.cell.erg { background: #bbf7d0; }
+
+.wort-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 8px; }
+.wort-group h4 { font-size: 10px; font-weight: 700; color: #9a3412; text-transform: uppercase; margin-bottom: 3px; }
+.wort-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+.pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 2px 7px; font-size: 10px; }
+
+.zahlen-title { font-size: 10px; font-weight: 700; color: #9a3412; text-transform: uppercase; margin-bottom: 3px; }
+.zahlen-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+.zahl-cell { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 3px 5px; text-align: center; font-size: 10px; }
+.zahl-cell .num { color: #9a3412; font-weight: 700; margin-right: 3px; }
+.zahl-cell.warn-cell { border-color: #f87171; background: #fff1f1; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 4px 8px; margin-bottom: 4px; background: white; font-size: 10.5px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 5px 9px; font-size: 10.5px; background: white; color: #4c1d95; font-weight: 600; }
+
+.footer { margin-top: 10px; padding-top: 5px; border-top: 0.5px solid #e2e8f0; font-size: 9px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 3 — Sprachen, Zahlen & Hobbys</h2>
+    </div>
+    <div class="badge">A1 · Lektion 3</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben</div>
+    <div class="section-body">
+      <div class="verb-block">
+        <h4>sprechen <span class="tag irr">unregelmäßig — Vokalwechsel e → i</span></h4>
+        <table class="konj">
+          <thead><tr><th class="pronomen-col">Pronomen</th><th>sprechen</th></tr></thead>
+          <tbody>
+            <tr><td class="pronomen">ich</td><td>spreche</td></tr>
+            <tr><td class="pronomen">du</td><td class="irregular">sprichst</td></tr>
+            <tr><td class="pronomen">er/sie/es</td><td class="irregular">spricht</td></tr>
+            <tr><td class="pronomen">wir</td><td>sprechen</td></tr>
+            <tr><td class="pronomen">ihr</td><td>sprecht</td></tr>
+            <tr><td class="pronomen">sie/Sie</td><td>sprechen</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik</div>
+    <div class="section-body">
+      <div class="gram-rule"><strong>Alter:</strong> Subjekt + sein + Zahl (+ Jahre alt) — z.B. Ich bin 16 (Jahre alt).</div>
+      <div class="gram-rule"><strong>gerne</strong> steht direkt nach dem konjugierten Verb</div>
+      <div class="gram-rule"><strong>Trennbares Verb</strong> fernsehen: Vorsilbe „fern" wandert ans Satzende</div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau</div>
+    <div class="section-body">
+      <div class="satz-legende">
+        <div class="leg-item"><span class="leg-swatch sw-subjekt"></span>Subjekt</div>
+        <div class="leg-item"><span class="leg-swatch sw-verb"></span>Verb</div>
+        <div class="leg-item"><span class="leg-swatch sw-frage"></span>Fragewort</div>
+        <div class="leg-item"><span class="leg-swatch sw-erg"></span>Ergänzung</div>
+      </div>
+      <div class="satzbau-box">
+        <div class="satz-row">
+          <div class="label">Alter</div>
+          <div class="cell subjekt">Ich</div><div class="cell verb">bin</div><div class="cell erg">16 Jahre alt.</div>
+        </div>
+        <div class="satz-row">
+          <div class="label">Alter-Frage</div>
+          <div class="cell frage">Wie alt</div><div class="cell verb">bist</div><div class="cell subjekt">du?</div>
+        </div>
+        <div class="satz-row">
+          <div class="label">Hobby</div>
+          <div class="cell subjekt">Ich</div><div class="cell verb">spiele</div><div class="cell erg">gerne Fußball.</div>
+        </div>
+        <div class="satz-row">
+          <div class="label">Trennbar</div>
+          <div class="cell subjekt">Ich</div><div class="cell verb">sehe</div><div class="cell erg">gerne fern.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter</div>
+    <div class="section-body">
+      <div class="wort-groups">
+        <div class="wort-group">
+          <h4>Sprachen</h4>
+          <div class="wort-pills">
+            <span class="pill">Deutsch</span>
+            <span class="pill">Englisch</span>
+            <span class="pill">Vietnamesisch</span>
+            <span class="pill">Französisch</span>
+            <span class="pill">Spanisch</span>
+          </div>
+        </div>
+        <div class="wort-group">
+          <h4>Sonstige</h4>
+          <div class="wort-pills">
+            <span class="pill">Wie alt?</span>
+            <span class="pill">gerne</span>
+          </div>
+        </div>
+      </div>
+      <div class="zahlen-title">Zahlen 1–20</div>
+      <div class="zahlen-grid">
+        <div class="zahl-cell"><span class="num">1</span>eins</div>
+        <div class="zahl-cell"><span class="num">2</span>zwei</div>
+        <div class="zahl-cell"><span class="num">3</span>drei</div>
+        <div class="zahl-cell"><span class="num">4</span>vier</div>
+        <div class="zahl-cell"><span class="num">5</span>fünf</div>
+        <div class="zahl-cell"><span class="num">6</span>sechs</div>
+        <div class="zahl-cell"><span class="num">7</span>sieben</div>
+        <div class="zahl-cell"><span class="num">8</span>acht</div>
+        <div class="zahl-cell"><span class="num">9</span>neun</div>
+        <div class="zahl-cell"><span class="num">10</span>zehn</div>
+        <div class="zahl-cell"><span class="num">11</span>elf</div>
+        <div class="zahl-cell"><span class="num">12</span>zwölf</div>
+        <div class="zahl-cell"><span class="num">13</span>dreizehn</div>
+        <div class="zahl-cell"><span class="num">14</span>vierzehn</div>
+        <div class="zahl-cell"><span class="num">15</span>fünfzehn</div>
+        <div class="zahl-cell warn-cell"><span class="num">16</span>sechzehn ⚠️</div>
+        <div class="zahl-cell warn-cell"><span class="num">17</span>siebzehn ⚠️</div>
+        <div class="zahl-cell"><span class="num">18</span>achtzehn</div>
+        <div class="zahl-cell"><span class="num">19</span>neunzehn</div>
+        <div class="zahl-cell"><span class="num">20</span>zwanzig</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung</div>
+    <div class="section-body">
+      <div class="achtung-item row"><span class="falsch">❌ du sprechst</span><span class="richtig">✅ du sprichst</span></div>
+      <div class="achtung-item row"><span class="falsch">❌ Ich habe 20 Jahre</span><span class="richtig">✅ Ich bin 20 Jahre alt</span></div>
+      <div class="achtung-item row"><span class="falsch">❌ Ich sehe fern gerne</span><span class="richtig">✅ Ich sehe gerne fern</span></div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele</div>
+    <div class="section-body">
+      <div class="beispiele-grid">
+        <div class="beispiel-box">Ich spreche Vietnamesisch.</div>
+        <div class="beispiel-box">Sprichst du Englisch?</div>
+        <div class="beispiel-box">Ich bin 16 Jahre alt.</div>
+        <div class="beispiel-box">Ich sehe gerne fern.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 3 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

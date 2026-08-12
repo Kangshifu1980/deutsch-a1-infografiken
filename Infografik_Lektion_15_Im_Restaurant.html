@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 15</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 10mm 13mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #1e293b; padding-bottom: 4px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 17px; font-weight: 700; color: #1e293b; }
+.doc-header h2 { font-size: 10.5px; font-weight: 500; color: #475569; margin-top: 1px; }
+.doc-header .badge { font-size: 9.5px; font-weight: 600; background: #e2e8f0; color: #1e293b; padding: 2px 9px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 3px 8px; border-radius: 4px 4px 0 0; margin-top: 6px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 6px 9px; margin-bottom: 2px; }
+
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+table { width: 100%; border-collapse: collapse; }
+table.konj th { background: #374151; color: white; font-size: 9.5px; font-weight: 700; padding: 2px 4px; text-align: center; border: 0.5px solid #4b5563; }
+table.konj th.pronomen-col { background: #1e3a8a; text-align: left; width: 60px; }
+table.konj td { padding: 2px 4px; border: 0.5px solid #e2e8f0; font-size: 10px; text-align: center; background: white; }
+table.konj td.pronomen { background: #f1f5f9; font-weight: 700; color: #1e3a8a; text-align: left; font-size: 9.5px; }
+table.konj tr:nth-child(even) td:not(.pronomen) { background: #f8fafc; }
+
+.verben-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.verben-grid2 h4 { font-size: 10px; font-weight: 700; color: #1e3a8a; margin-bottom: 2px; text-align: center; }
+
+.gram-rule { border-left: 3px solid #16a34a; background: white; border-radius: 0 6px 6px 0; padding: 3px 7px; margin-bottom: 3px; font-size: 10px; }
+.gram-rule strong { color: #15803d; }
+
+.mini-table { margin-bottom: 3px; }
+.mini-table th { background: #16a34a; color: white; font-size: 9px; font-weight: 700; padding: 2px 4px; border: 0.5px solid #15803d; }
+.mini-table td { padding: 2px 4px; border: 0.5px solid #bbf7d0; font-size: 9.5px; text-align: center; background: white; }
+.mini-table td.g { background: #f0fdf4; font-weight: 700; text-align: left; }
+
+.dativ-box { display: grid; grid-template-columns: 1.4fr 1fr; gap: 10px; align-items: start; }
+.dativ-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.dativ-chip { display: flex; align-items: center; gap: 4px; background: white; border: 1px solid #bbf7d0; border-radius: 7px; padding: 3px 7px; font-size: 10px; font-weight: 700; }
+.dativ-chip .nom { color: #1e3a8a; }
+.dativ-chip .arrow { color: #16a34a; }
+.dativ-chip .dat { color: #7e22ce; background: #f3e8ff; padding: 1px 6px; border-radius: 5px; }
+.satzstruktur { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.ss-box { width: 100%; text-align: center; border-radius: 6px; padding: 4px 6px; font-size: 9.5px; font-weight: 700; }
+.ss-box.sache { background: #bfdbfe; color: #1e3a8a; }
+.ss-box.verb { background: #fecaca; color: #7c2d12; }
+.ss-box.person { background: #e9d5ff; color: #6b21a8; }
+.ss-arrow { color: #94a3b8; font-size: 12px; }
+
+.satz-legende { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 5px; font-size: 9px; }
+.leg-item { display: flex; align-items: center; gap: 4px; }
+.leg-swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.sw-subjekt { background: #60a5fa; }
+.sw-verb { background: #f87171; }
+.sw-dativ { background: #c084fc; }
+.sw-erg { background: #4ade80; }
+
+.satzbau-box { display: flex; flex-direction: column; gap: 3px; }
+.satz-group-label { font-weight: 700; color: #78350f; font-size: 9.5px; margin-bottom: 2px; background: #fef3c7; display: inline-block; padding: 1px 7px; border-radius: 4px; border: 1px solid #fde68a; }
+.satz-pair { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 10px; }
+.satz-row .cell { padding: 2px 7px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.cell.subjekt { background: #bfdbfe; }
+.cell.verb { background: #fecaca; }
+.cell.dativ { background: #e9d5ff; }
+.cell.erg { background: #bbf7d0; }
+
+.wort-group h4 { font-size: 9px; font-weight: 700; color: #9a3412; text-transform: uppercase; margin-bottom: 2px; }
+.wort-pills { display: flex; flex-wrap: wrap; gap: 3px; }
+.pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 1.5px 5px; font-size: 9px; }
+.wort-row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 3px 7px; margin-bottom: 3px; background: white; font-size: 10px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 4px 8px; font-size: 10px; background: white; color: #4c1d95; font-weight: 600; }
+
+.footer { margin-top: 6px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8.5px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 15 — Im Restaurant</h2>
+    </div>
+    <div class="badge">A1 · Lektion 15</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben (Sache = Subjekt!)</div>
+    <div class="section-body">
+      <div class="verben-grid2">
+        <div>
+          <h4>schmecken</h4>
+          <table class="konj">
+            <thead><tr><th class="pronomen-col">Subjekt</th><th>Form</th></tr></thead>
+            <tbody>
+              <tr><td class="pronomen">Singular</td><td>schmeckt</td></tr>
+              <tr><td class="pronomen">Plural</td><td>schmecken</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h4>gefallen ⚠️</h4>
+          <table class="konj">
+            <thead><tr><th class="pronomen-col">Subjekt</th><th>Form</th></tr></thead>
+            <tbody>
+              <tr><td class="pronomen">Singular</td><td>gefällt</td></tr>
+              <tr><td class="pronomen">Plural</td><td>gefallen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik</div>
+    <div class="section-body">
+      <div class="gram-rule">Neu: <strong>Dativpronomen</strong> — zum ersten Mal!</div>
+      <div class="dativ-box">
+        <div class="dativ-chips">
+          <div class="dativ-chip"><span class="nom">ich</span><span class="arrow">→</span><span class="dat">mir</span></div>
+          <div class="dativ-chip"><span class="nom">du</span><span class="arrow">→</span><span class="dat">dir</span></div>
+          <div class="dativ-chip"><span class="nom">er/es</span><span class="arrow">→</span><span class="dat">ihm</span></div>
+          <div class="dativ-chip"><span class="nom">sie</span><span class="arrow">→</span><span class="dat">ihr</span></div>
+          <div class="dativ-chip"><span class="nom">wir</span><span class="arrow">→</span><span class="dat">uns</span></div>
+          <div class="dativ-chip"><span class="nom">ihr</span><span class="arrow">→</span><span class="dat">euch</span></div>
+          <div class="dativ-chip"><span class="nom">sie/Sie</span><span class="arrow">→</span><span class="dat">ihnen</span></div>
+        </div>
+        <div class="satzstruktur">
+          <div class="ss-box sache">🍜 Sache (Subjekt)</div>
+          <div class="ss-arrow">↓</div>
+          <div class="ss-box verb">schmeckt / gefällt</div>
+          <div class="ss-arrow">↓</div>
+          <div class="ss-box person">🙋 Person (Dativ)</div>
+        </div>
+      </div>
+      <div class="gram-rule" style="margin-top:2px;">Satzstruktur: <strong>[Sache] + schmeckt/gefällt + [Person im Dativ]</strong> — nicht die Person ist Subjekt!</div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau</div>
+    <div class="section-body">
+      <div class="satz-legende">
+        <div class="leg-item"><span class="leg-swatch sw-subjekt"></span>Subjekt (Sache)</div>
+        <div class="leg-item"><span class="leg-swatch sw-verb"></span>Verb</div>
+        <div class="leg-item"><span class="leg-swatch sw-dativ"></span>Person (Dativ)</div>
+        <div class="leg-item"><span class="leg-swatch sw-erg"></span>Ergänzung</div>
+      </div>
+      <div class="satzbau-box">
+        <div>
+          <div class="satz-group-label">schmecken (Singular)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Die Suppe</div><div class="cell verb">schmeckt</div><div class="cell dativ">mir</div><div class="cell erg">gut.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Der Kuchen</div><div class="cell verb">schmeckt</div><div class="cell dativ">ihm</div><div class="cell erg">sehr gut.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">gefallen (Singular)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Das Restaurant</div><div class="cell verb">gefällt</div><div class="cell dativ">mir.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Die Deko</div><div class="cell verb">gefällt</div><div class="cell dativ">uns.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">gefallen (Plural)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Die Stühle</div><div class="cell verb">gefallen</div><div class="cell dativ">ihnen.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Die Preise</div><div class="cell verb">gefallen</div><div class="cell dativ">euch?</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">Frage</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell verb">Schmeckt</div><div class="cell dativ">dir</div><div class="cell subjekt">der Kaffee?</div></div>
+            <div class="satz-row"><div class="cell verb">Gefällt</div><div class="cell dativ">euch</div><div class="cell subjekt">das Restaurant?</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter</div>
+    <div class="section-body">
+      <div class="wort-row3">
+        <div class="wort-group">
+          <h4>Restaurant</h4>
+          <div class="wort-pills">
+            <span class="pill">die Speisekarte</span>
+            <span class="pill">der/die Kellner/in</span>
+            <span class="pill">bestellen</span>
+            <span class="pill">die Rechnung</span>
+            <span class="pill">reservieren</span>
+          </div>
+        </div>
+        <div class="wort-group">
+          <h4>Geschmack & Getränke</h4>
+          <div class="wort-pills">
+            <span class="pill">Mineralwasser</span>
+            <span class="pill">Rotwein / Weißwein</span>
+            <span class="pill">lecker</span>
+            <span class="pill">salzig</span>
+            <span class="pill">süß</span>
+            <span class="pill">scharf</span>
+          </div>
+        </div>
+        <div class="wort-group">
+          <h4>Gerichte</h4>
+          <div class="wort-pills">
+            <span class="pill">die Suppe</span>
+            <span class="pill">der Kuchen</span>
+            <span class="pill">das Steak</span>
+            <span class="pill">das Eis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung</div>
+    <div class="section-body">
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich schmecke die Suppe gut.</span><span class="richtig">✅ Die Suppe schmeckt mir gut.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Die Suppe schmeckt ich gut.</span><span class="richtig">✅ Die Suppe schmeckt mir gut.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Die Stühle gefällt ihnen.</span><span class="richtig">✅ Die Stühle gefallen ihnen.</span></div></div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele</div>
+    <div class="section-body">
+      <div class="beispiele-grid">
+        <div class="beispiel-box">Der Fisch schmeckt ihnen gut.</div>
+        <div class="beispiel-box">Die Deko gefällt uns.</div>
+        <div class="beispiel-box">Ich möchte den Fisch bestellen.</div>
+        <div class="beispiel-box">Die Rechnung, bitte!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 15 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

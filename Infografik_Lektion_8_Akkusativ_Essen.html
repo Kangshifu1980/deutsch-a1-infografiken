@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 8</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 10mm 13mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #1e293b; padding-bottom: 4px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 17px; font-weight: 700; color: #1e293b; }
+.doc-header h2 { font-size: 10.5px; font-weight: 500; color: #475569; margin-top: 1px; }
+.doc-header .badge { font-size: 9.5px; font-weight: 600; background: #e2e8f0; color: #1e293b; padding: 2px 9px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 3px 8px; border-radius: 4px 4px 0 0; margin-top: 6px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 6px 9px; margin-bottom: 2px; }
+
+/* Blockfarben */
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+table { width: 100%; border-collapse: collapse; }
+table.konj th { background: #374151; color: white; font-size: 9.5px; font-weight: 700; padding: 2px 4px; text-align: center; border: 0.5px solid #4b5563; }
+table.konj th.pronomen-col { background: #1e3a8a; text-align: left; width: 70px; }
+table.konj td { padding: 2px 4px; border: 0.5px solid #e2e8f0; font-size: 10px; text-align: center; background: white; }
+table.konj td.pronomen { background: #f1f5f9; font-weight: 700; color: #1e3a8a; text-align: left; font-size: 9.5px; }
+table.konj tr:nth-child(even) td:not(.pronomen) { background: #f8fafc; }
+table.konj td.irregular { color: #b45309; font-weight: 700; }
+
+.weitere-verben-box { border: 1px solid #93c5fd; border-radius: 6px; padding: 4px 8px; margin-top: 4px; background: white; font-size: 9.5px; }
+.weitere-verben-box .zeile { margin-bottom: 2px; }
+.weitere-verben-box .zeile:last-child { margin-bottom: 0; }
+.weitere-verben-box .tag { display: inline-block; font-size: 8px; font-weight: 700; padding: 1px 5px; border-radius: 8px; margin-right: 5px; }
+.weitere-verben-box .tag.reg { background: #dcfce7; color: #14532d; }
+.weitere-verben-box .tag.irr { background: #fef3c7; color: #92400e; }
+
+.gram-rule { border-left: 3px solid #16a34a; background: white; border-radius: 0 6px 6px 0; padding: 3px 7px; margin-bottom: 3px; font-size: 10px; }
+.gram-rule strong { color: #15803d; }
+
+.akk-table { margin-bottom: 3px; }
+.akk-table th { background: #16a34a; color: white; font-size: 9px; font-weight: 700; padding: 2px 4px; border: 0.5px solid #15803d; }
+.akk-table td { padding: 2px 4px; border: 0.5px solid #bbf7d0; font-size: 9.5px; text-align: center; background: white; }
+.akk-table td.g { background: #f0fdf4; font-weight: 700; text-align: left; }
+.akk-table td.aendert-ja { color: #b45309; font-weight: 700; }
+.akk-table td.aendert-nein { color: #15803d; }
+
+/* Satzbau-Legende */
+.satz-legende { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 5px; font-size: 9px; }
+.leg-item { display: flex; align-items: center; gap: 4px; }
+.leg-swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.sw-subjekt { background: #60a5fa; }
+.sw-verb { background: #f87171; }
+.sw-frage { background: #a78bfa; }
+.sw-erg { background: #4ade80; }
+
+.satzbau-box { display: flex; flex-direction: column; gap: 2px; }
+.satz-group { margin-bottom: 0; }
+.satz-group-label { font-weight: 700; color: #78350f; font-size: 9.5px; margin-bottom: 2px; background: #fef3c7; display: inline-block; padding: 1px 7px; border-radius: 4px; border: 1px solid #fde68a; }
+.satz-pair { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 10px; }
+.satz-row .cell { padding: 2px 7px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.cell.subjekt { background: #bfdbfe; }
+.cell.verb { background: #fecaca; }
+.cell.frage { background: #ddd6fe; }
+.cell.erg { background: #bbf7d0; }
+
+.wort-group h4 { font-size: 9px; font-weight: 700; color: #9a3412; text-transform: uppercase; margin-bottom: 2px; }
+.wort-pills { display: flex; flex-wrap: wrap; gap: 3px; }
+.pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 1.5px 5px; font-size: 9px; }
+.wort-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 5px; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 3px 7px; margin-bottom: 3px; background: white; font-size: 10px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 4px 8px; font-size: 10px; background: white; color: #4c1d95; font-weight: 600; }
+
+.footer { margin-top: 6px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8.5px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 8 — Der Akkusativ (Essen & Trinken)</h2>
+    </div>
+    <div class="badge">A1 · Lektion 8</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben</div>
+    <div class="section-body">
+      <table class="konj">
+        <thead><tr><th class="pronomen-col">Pronomen</th><th>trinken (regelmäßig)</th><th>essen (unregelmäßig)</th></tr></thead>
+        <tbody>
+          <tr><td class="pronomen">ich</td><td>trinke</td><td>esse</td></tr>
+          <tr><td class="pronomen">du</td><td>trinkst</td><td class="irregular">isst</td></tr>
+          <tr><td class="pronomen">er/sie/es</td><td>trinkt</td><td class="irregular">isst</td></tr>
+          <tr><td class="pronomen">wir</td><td>trinken</td><td>essen</td></tr>
+          <tr><td class="pronomen">ihr</td><td>trinkt</td><td>esst</td></tr>
+          <tr><td class="pronomen">sie/Sie</td><td>trinken</td><td>essen</td></tr>
+        </tbody>
+      </table>
+      <div class="weitere-verben-box">
+        <div class="zeile"><span class="tag reg">regelmäßig</span>kaufen, brauchen, bezahlen, kochen</div>
+        <div class="zeile"><span class="tag irr">unregelmäßig ⚠️</span>nehmen (du nimmst, er/sie/es nimmt), mögen (ich mag, du magst, er/sie/es mag)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik</div>
+    <div class="section-body">
+      <div class="gram-rule">Im Akkusativ ändert sich <strong>nur der maskuline Artikel</strong> (der→den, ein→einen)</div>
+      <table class="akk-table">
+        <thead><tr><th>Genus</th><th>Nominativ</th><th>Akkusativ</th><th>Ändert sich?</th></tr></thead>
+        <tbody>
+          <tr><td class="g">der (m)</td><td>der/ein Apfel</td><td>den/einen Apfel</td><td class="aendert-ja">⚠️ ja</td></tr>
+          <tr><td class="g">die (f)</td><td>die/eine Banane</td><td>die/eine Banane</td><td class="aendert-nein">nein</td></tr>
+          <tr><td class="g">das (n)</td><td>das/ein Brot</td><td>das/ein Brot</td><td class="aendert-nein">nein</td></tr>
+          <tr><td class="g">Plural</td><td>die Äpfel</td><td>die Äpfel</td><td class="aendert-nein">nein</td></tr>
+        </tbody>
+      </table>
+      <div class="gram-rule" style="margin-top:2px;">Akkusativ-Verben (Frage: <strong>wen/was?</strong>) — essen, trinken + siehe Verben-Bereich oben</div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau</div>
+    <div class="section-body">
+      <div class="satz-legende">
+        <div class="leg-item"><span class="leg-swatch sw-subjekt"></span>Subjekt</div>
+        <div class="leg-item"><span class="leg-swatch sw-verb"></span>Verb</div>
+        <div class="leg-item"><span class="leg-swatch sw-frage"></span>Fragewort</div>
+        <div class="leg-item"><span class="leg-swatch sw-erg"></span>Akk.-Objekt</div>
+      </div>
+      <div class="satzbau-box">
+        <div class="satz-group">
+          <div class="satz-group-label">maskulin: der → den</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">esse</div><div class="cell erg">den Apfel.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">trinke</div><div class="cell erg">den Kaffee.</div></div>
+          </div>
+        </div>
+        <div class="satz-group">
+          <div class="satz-group-label">feminin: die bleibt die</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">esse</div><div class="cell erg">die Wurst.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">trinke</div><div class="cell erg">die Milch.</div></div>
+          </div>
+        </div>
+        <div class="satz-group">
+          <div class="satz-group-label">neutral: das bleibt das</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">esse</div><div class="cell erg">das Brot.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">trinke</div><div class="cell erg">das Wasser.</div></div>
+          </div>
+        </div>
+        <div class="satz-group">
+          <div class="satz-group-label">unbestimmt: ein → einen</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">trinke</div><div class="cell erg">einen Kaffee.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">esse</div><div class="cell erg">einen Apfel.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter</div>
+    <div class="section-body">
+      <div class="wort-group">
+        <h4>Essen</h4>
+        <div class="wort-pills">
+          <span class="pill">der Apfel</span>
+          <span class="pill">die Banane</span>
+          <span class="pill">das Brot</span>
+          <span class="pill">der Käse</span>
+          <span class="pill">die Wurst</span>
+          <span class="pill">der Reis</span>
+          <span class="pill">das Ei</span>
+          <span class="pill">der Fisch</span>
+          <span class="pill">das Gemüse</span>
+          <span class="pill">der Salat</span>
+        </div>
+      </div>
+      <div class="wort-group" style="margin-top:5px;">
+        <h4>Trinken</h4>
+        <div class="wort-pills">
+          <span class="pill">das Wasser</span>
+          <span class="pill">der Kaffee / Tee</span>
+          <span class="pill">die Milch</span>
+          <span class="pill">der Saft</span>
+          <span class="pill">der Wein</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung</div>
+    <div class="section-body">
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich esse der Apfel.</span><span class="richtig">✅ Ich esse den Apfel.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich trinke ein Kaffee.</span><span class="richtig">✅ Ich trinke einen Kaffee.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich esse die Brot.</span><span class="richtig">✅ Ich esse das Brot.</span></div></div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele</div>
+    <div class="section-body">
+      <div class="beispiele-grid">
+        <div class="beispiel-box">Sie kauft die Wurst.</div>
+        <div class="beispiel-box">Er nimmt den Salat.</div>
+        <div class="beispiel-box">Ich mag den Kaffee.</div>
+        <div class="beispiel-box">Wir essen das Gemüse.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 8 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

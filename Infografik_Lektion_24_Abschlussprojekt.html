@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 24</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 9mm 12mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 3px solid #f59e0b; padding-bottom: 4px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 17px; font-weight: 800; color: #92400e; }
+.doc-header h2 { font-size: 10px; font-weight: 500; color: #475569; margin-top: 1px; }
+.doc-header .badge { font-size: 9.5px; font-weight: 700; background: linear-gradient(135deg,#fde68a,#f59e0b); color: #78350f; padding: 3px 11px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 10.5px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 2.5px 8px; border-radius: 4px 4px 0 0; margin-top: 5px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 5px 8px; margin-bottom: 2px; }
+
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+/* Verben: haben vs sein Übersicht */
+.hs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.hs-card { border-radius: 8px; padding: 5px 8px; text-align: center; }
+.hs-card.haben { border: 1.5px solid #93c5fd; background: white; }
+.hs-card.sein { border: 1.5px solid #fbbf24; background: #fffbeb; }
+.hs-card .titel { font-weight: 800; font-size: 10px; margin-bottom: 2px; }
+.hs-card.haben .titel { color: #1e40af; }
+.hs-card.sein .titel { color: #92400e; }
+.hs-card .txt { font-size: 9px; color: #1a1a1a; }
+
+/* Grammatik: Werkzeugkiste gruppiert */
+.wz-check-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.wz-col { background: white; border-radius: 6px; padding: 4px 6px; }
+.wz-col-titel { font-size: 8px; font-weight: 800; text-transform: uppercase; padding: 1px 5px; border-radius: 4px; display: inline-block; margin-bottom: 3px; color: white; }
+.wz-col-titel.c1 { background: #3b82f6; }
+.wz-col-titel.c2 { background: #10b981; }
+.wz-col-titel.c3 { background: #f59e0b; }
+.wz-col-titel.c4 { background: #ec4899; }
+.wz-col-titel.c5 { background: #8b5cf6; }
+.wz-check { font-size: 8.7px; color: #1a1a1a; padding: 1px 0; }
+.wz-check .ck { color: #16a34a; font-weight: 800; margin-right: 2px; }
+
+.c-satzbau .section-title { font-size: 12px; padding: 4px 10px; }
+.c-satzbau .section-body { padding: 10px 12px; }
+/* Satzbau -> Fragenkatalog */
+.frage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; }
+.frage-item { font-size: 11px; padding: 3px 0; font-weight: 600; }
+.frage-item .num { font-weight: 800; color: #92400e; margin-right: 4px; font-size: 12px; }
+
+.thema-chips { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
+.thema-chip { background: white; border: 1px solid #fdba74; border-radius: 20px; padding: 3px 12px; font-size: 9.5px; font-weight: 700; color: #9a3412; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 2.5px 7px; margin-bottom: 2px; background: white; font-size: 9.5px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.mini-vortrag { background: white; border: 1px solid #ddd6fe; border-radius: 8px; padding: 8px 12px; font-size: 10.5px; color: #4c1d95; font-weight: 500; line-height: 1.6; }
+.mini-vortrag strong { font-weight: 800; }
+
+.footer { margin-top: 5px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🎓 Deutsch A1 — Abschluss-Cheatsheet</h1>
+      <h2>Lektion 24 — Dein Referenzblatt für den ganzen Kurs</h2>
+    </div>
+    <div class="badge">🎉 A1 geschafft</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben — Perfekt: haben oder sein?</div>
+    <div class="section-body">
+      <div class="hs-grid">
+        <div class="hs-card haben">
+          <div class="titel">haben — die meisten Verben</div>
+          <div class="txt">kochen, arbeiten, lernen, spielen, kaufen, essen, sprechen, telefonieren ...</div>
+        </div>
+        <div class="hs-card sein">
+          <div class="titel">sein — Bewegung/Zustand</div>
+          <div class="txt">gehen, fahren, fliegen, kommen, bleiben, aufstehen ...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik — Alles auf einen Blick</div>
+    <div class="section-body">
+      <div class="wz-check-grid">
+        <div class="wz-col">
+          <span class="wz-col-titel c1">🔵 Grundlagen</span>
+          <div class="wz-check"><span class="ck">✓</span>sein / heißen</div>
+          <div class="wz-check"><span class="ck">✓</span>W-Fragen</div>
+        </div>
+        <div class="wz-col">
+          <span class="wz-col-titel c2">🟢 Kasus</span>
+          <div class="wz-check"><span class="ck">✓</span>kein</div>
+          <div class="wz-check"><span class="ck">✓</span>mein</div>
+          <div class="wz-check"><span class="ck">✓</span>Akkusativ</div>
+          <div class="wz-check"><span class="ck">✓</span>Dativ</div>
+        </div>
+        <div class="wz-col">
+          <span class="wz-col-titel c3">🟡 Zeit</span>
+          <div class="wz-check"><span class="ck">✓</span>Trennbare Verben</div>
+          <div class="wz-check"><span class="ck">✓</span>Modalverben</div>
+          <div class="wz-check"><span class="ck">✓</span>Imperativ</div>
+        </div>
+        <div class="wz-col">
+          <span class="wz-col-titel c4">🌸 Perfekt</span>
+          <div class="wz-check"><span class="ck">✓</span>mit haben</div>
+          <div class="wz-check"><span class="ck">✓</span>mit sein</div>
+        </div>
+        <div class="wz-col">
+          <span class="wz-col-titel c5">🟣 Satzbau</span>
+          <div class="wz-check"><span class="ck">✓</span>als</div>
+          <div class="wz-check"><span class="ck">✓</span>dass</div>
+          <div class="wz-check"><span class="ck">✓</span>weil</div>
+          <div class="wz-check"><span class="ck">✓</span>denn</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau — Gerüst deiner Präsentation</div>
+    <div class="section-body">
+      <div class="frage-grid">
+        <div class="frage-item"><span class="num">1️⃣</span>Wer bist du? Wie heißt du?</div>
+        <div class="frage-item"><span class="num">2️⃣</span>Woher kommst du? Sprachen?</div>
+        <div class="frage-item"><span class="num">3️⃣</span>Beruf? Familie?</div>
+        <div class="frage-item"><span class="num">4️⃣</span>Dein Tagesablauf?</div>
+        <div class="frage-item"><span class="num">5️⃣</span>Hobbys? Was kannst du gut?</div>
+        <div class="frage-item"><span class="num">6️⃣</span>Was hast du letztes Wochenende gemacht? (Perfekt)</div>
+        <div class="frage-item"><span class="num">7️⃣</span>Vergleiche zwei Dinge. (Komparativ)</div>
+        <div class="frage-item"><span class="num">8️⃣</span>Warum lernst du Deutsch? (weil/denn)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter — Wortschatz-Recycling</div>
+    <div class="section-body">
+      <div class="thema-chips">
+        <span class="thema-chip">👋 Vorstellung</span>
+        <span class="thema-chip">👨‍👩‍👧 Familie</span>
+        <span class="thema-chip">🍎 Essen</span>
+        <span class="thema-chip">🏠 Wohnung</span>
+        <span class="thema-chip">⏰ Alltag</span>
+        <span class="thema-chip">🎾 Freizeit</span>
+        <span class="thema-chip">🍽️ Restaurant & Weg</span>
+        <span class="thema-chip">☀️ Wetter & Körper</span>
+        <span class="thema-chip">🕰️ Perfekt</span>
+        <span class="thema-chip">⚖️ Vergleiche</span>
+        <span class="thema-chip">✉️ E-Mail & Brief</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung — die 3 häufigsten Fehler des Kurses</div>
+    <div class="section-body">
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich habe keinen Auto.</span><span class="richtig">✅ Ich habe kein Auto. (das Auto = neutral)</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich bin gestern gekocht.</span><span class="richtig">✅ Ich habe gestern gekocht.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich finde, dass ist Berlin schön.</span><span class="richtig">✅ Ich finde, dass Berlin schön ist.</span></div></div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele — aus dem Muster-Skript</div>
+    <div class="section-body">
+      <div class="mini-vortrag">
+        <strong>Ich heiße Lisa</strong> und komme aus Hamburg. <strong>Ich arbeite als Verkäuferin.</strong> Ich stehe um 7 Uhr auf und fahre mit dem Fahrrad zur Arbeit. <strong>Letztes Wochenende bin ich nach Berlin gefahren.</strong> Ich finde, <strong>dass Hamburg schöner ist als Berlin.</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 24 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 20</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 10mm 13mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #1e293b; padding-bottom: 4px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 17px; font-weight: 700; color: #1e293b; }
+.doc-header h2 { font-size: 10.5px; font-weight: 500; color: #475569; margin-top: 1px; }
+.doc-header .badge { font-size: 9.5px; font-weight: 600; background: #e2e8f0; color: #1e293b; padding: 2px 9px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 3px 8px; border-radius: 4px 4px 0 0; margin-top: 6px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 6px 9px; margin-bottom: 2px; }
+
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+.partizip-gruppe { margin-bottom: 5px; }
+.partizip-gruppe:last-child { margin-bottom: 0; }
+.pg-titel { font-size: 9px; font-weight: 700; color: #1e3a8a; text-transform: uppercase; margin-bottom: 3px; }
+.partizip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.partizip-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+.partizip-chip { background: white; border: 1px solid #93c5fd; border-radius: 6px; padding: 3px 6px; font-size: 9.5px; text-align: center; }
+.partizip-chip .inf { color: #64748b; }
+.partizip-chip .arrow { color: #2563eb; margin: 0 2px; }
+.partizip-chip .ist { color: #b45309; font-weight: 800; }
+.partizip-chip .stamm-part { color: #1e3a8a; font-weight: 800; }
+.partizip-chip.reg { border-color: #86efac; background: #f0fdf4; }
+.partizip-chip.reg .stamm-part { color: #15803d; }
+
+.gram-rule { border-left: 3px solid #16a34a; background: white; border-radius: 0 6px 6px 0; padding: 3px 7px; margin-bottom: 3px; font-size: 10px; }
+.gram-rule strong { color: #15803d; }
+
+.sein-haben-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 5px; }
+.sh-card { border-radius: 8px; padding: 6px 8px; }
+.sh-card.sein { border: 1.5px solid #86efac; background: #f0fdf4; }
+.sh-card.haben { border: 1.5px solid #93c5fd; background: #eff6ff; }
+.sh-card .titel { font-weight: 700; font-size: 9.5px; margin-bottom: 3px; }
+.sh-card.sein .titel { color: #15803d; }
+.sh-card.haben .titel { color: #1e3a8a; }
+.sh-card .verben { font-size: 9.5px; color: #1a1a1a; line-height: 1.5; }
+.sh-card .ausnahme { margin-top: 3px; font-size: 8.5px; color: #b45309; font-weight: 600; }
+
+.aha-box { border: 1.5px solid #fde68a; background: #fffbeb; border-radius: 8px; padding: 5px 8px; margin-bottom: 5px; font-size: 9.5px; }
+.aha-box .titel { font-weight: 700; color: #92400e; margin-bottom: 2px; }
+
+.sandwich-diagram { display: flex; align-items: center; justify-content: center; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+.sw-box { padding: 4px 9px; border-radius: 6px; font-size: 9.5px; font-weight: 700; text-align: center; }
+.sw-box.subj { background: #bfdbfe; color: #1e3a8a; }
+.sw-box.hab { background: #fecaca; color: #7c2d12; }
+.sw-box.mid { background: #f1f5f9; color: #64748b; font-weight: 400; font-style: italic; }
+.sw-box.part { background: #fef08a; color: #854d0e; }
+
+.satz-legende { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 5px; font-size: 9px; }
+.leg-item { display: flex; align-items: center; gap: 4px; }
+.leg-swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.sw-subjekt { background: #60a5fa; }
+.sw-verb { background: #f87171; }
+.sw-erg { background: #4ade80; }
+.sw-part2 { background: #fbbf24; }
+
+.satzbau-box { display: flex; flex-direction: column; gap: 3px; }
+.satz-group-label { font-weight: 700; color: #78350f; font-size: 9.5px; margin-bottom: 2px; background: #fef3c7; display: inline-block; padding: 1px 7px; border-radius: 4px; border: 1px solid #fde68a; }
+.satz-pair { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 10px; }
+.satz-row .cell { padding: 2px 7px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.cell.subjekt { background: #bfdbfe; }
+.cell.verb { background: #fecaca; }
+.cell.erg { background: #bbf7d0; }
+.cell.part { background: #fef08a; }
+
+.wort-group h4 { font-size: 9px; font-weight: 700; color: #9a3412; text-transform: uppercase; margin-bottom: 2px; }
+.wort-pills { display: flex; flex-wrap: wrap; gap: 3px; }
+.pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 1.5px 5px; font-size: 9px; }
+.wort-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 3px 7px; margin-bottom: 3px; background: white; font-size: 10px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 4px 8px; font-size: 10px; background: white; color: #4c1d95; font-weight: 600; }
+
+.footer { margin-top: 6px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8.5px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 20 — Das Perfekt (Teil 2)</h2>
+    </div>
+    <div class="badge">A1 · Lektion 20</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben — Perfekt mit „sein"</div>
+    <div class="section-body">
+      <div class="partizip-gruppe">
+        <div class="pg-titel">Unregelmäßig (Vokalwechsel)</div>
+        <div class="partizip-grid">
+          <div class="partizip-chip"><span class="inf">gehen</span><span class="arrow">→</span><span class="ist">ist</span> <span class="stamm-part">gegangen</span></div>
+          <div class="partizip-chip"><span class="inf">fahren</span><span class="arrow">→</span><span class="ist">ist</span> <span class="stamm-part">gefahren</span></div>
+          <div class="partizip-chip"><span class="inf">fliegen</span><span class="arrow">→</span><span class="ist">ist</span> <span class="stamm-part">geflogen</span></div>
+          <div class="partizip-chip"><span class="inf">kommen</span><span class="arrow">→</span><span class="ist">ist</span> <span class="stamm-part">gekommen</span></div>
+          <div class="partizip-chip"><span class="inf">bleiben ⚠️</span><span class="arrow">→</span><span class="ist">ist</span> <span class="stamm-part">geblieben</span></div>
+        </div>
+      </div>
+      <div class="partizip-gruppe">
+        <div class="pg-titel">Regelmäßig (trotzdem „sein"!)</div>
+        <div class="partizip-grid two-col">
+          <div class="partizip-chip reg"><span class="inf">reisen</span><span class="arrow">→</span><span class="ist">ist</span> <span class="stamm-part">gereist</span></div>
+          <div class="partizip-chip reg"><span class="inf">wandern</span><span class="arrow">→</span><span class="ist">ist</span> <span class="stamm-part">gewandert</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik</div>
+    <div class="section-body">
+      <div class="gram-rule">Neu: nicht alle Verben nehmen „haben"! Bewegung/Zustandsänderung → <strong>sein</strong></div>
+      <div class="sein-haben-grid">
+        <div class="sh-card sein">
+          <div class="titel">✅ sein — Bewegung/Zustand</div>
+          <div class="verben">🚶 gehen · 🚗 fahren · ✈️ fliegen · 🚏 kommen · 🧳 reisen · 🥾 wandern</div>
+          <div class="ausnahme">Ausnahme: bleiben (keine Bewegung, trotzdem sein!)</div>
+        </div>
+        <div class="sh-card haben">
+          <div class="titel">✅ haben — alles andere</div>
+          <div class="verben">🍳 kochen · 💼 arbeiten · 📖 lernen · ⚽ spielen · 📞 telefonieren · 🧹 putzen</div>
+        </div>
+      </div>
+      <div class="aha-box">
+        <div class="titel">⭐ Aha-Effekt</div>
+        regelmäßig/unregelmäßig ist <strong>unabhängig</strong> von sein/haben! „reisen" ist regelmäßig (gereist) — trotzdem sein, weil Bewegung.
+      </div>
+      <div class="gram-rule">Perfekt-Sandwich funktioniert genauso — nur mit „sein":</div>
+      <div class="sandwich-diagram">
+        <div class="sw-box subj">Ich</div>
+        <div class="sw-box hab">bin (Pos. 2)</div>
+        <div class="sw-box mid">gestern nach Berlin ...</div>
+        <div class="sw-box part">gefahren (Ende)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau</div>
+    <div class="section-body">
+      <div class="satz-legende">
+        <div class="leg-item"><span class="leg-swatch sw-subjekt"></span>Subjekt</div>
+        <div class="leg-item"><span class="leg-swatch sw-verb"></span>sein/haben</div>
+        <div class="leg-item"><span class="leg-swatch sw-erg"></span>Ergänzung</div>
+        <div class="leg-item"><span class="leg-swatch sw-part2"></span>Partizip (Ende)</div>
+      </div>
+      <div class="satzbau-box">
+        <div>
+          <div class="satz-group-label">sein + Bewegung</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">bin</div><div class="cell erg">nach Berlin</div><div class="cell part">gefahren.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Er</div><div class="cell verb">ist</div><div class="cell erg">nach Rom</div><div class="cell part">geflogen.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">sein + bleiben (Ausnahme)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Wir</div><div class="cell verb">sind</div><div class="cell erg">im Hotel</div><div class="cell part">geblieben.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">bin</div><div class="cell erg">zu Hause</div><div class="cell part">geblieben.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">haben (Kontrast, keine Bewegung)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Wir</div><div class="cell verb">haben</div><div class="cell erg">gestern</div><div class="cell part">gearbeitet.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">habe</div><div class="cell erg">lange</div><div class="cell part">telefoniert.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">Frage</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell verb">Bist</div><div class="cell subjekt">du</div><div class="cell erg">gestern</div><div class="cell part">gefahren?</div></div>
+            <div class="satz-row"><div class="cell verb">Seid</div><div class="cell subjekt">ihr</div><div class="cell erg">viel</div><div class="cell part">gewandert?</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter</div>
+    <div class="section-body">
+      <div class="wort-row2">
+        <div class="wort-group">
+          <h4>Verkehrsmittel</h4>
+          <div class="wort-pills">
+            <span class="pill">🚗 das Auto</span>
+            <span class="pill">🚌 der Bus</span>
+            <span class="pill">🚆 der Zug</span>
+            <span class="pill">🚲 das Fahrrad</span>
+            <span class="pill">✈️ das Flugzeug</span>
+          </div>
+        </div>
+        <div class="wort-group">
+          <h4>Reisen</h4>
+          <div class="wort-pills">
+            <span class="pill">der Urlaub</span>
+            <span class="pill">die Reise</span>
+            <span class="pill">der Ausflug</span>
+            <span class="pill">das Ziel</span>
+            <span class="pill">der Koffer</span>
+            <span class="pill">das Hotel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung</div>
+    <div class="section-body">
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich habe nach Berlin gefahren.</span><span class="richtig">✅ Ich bin nach Berlin gefahren.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Wir sind lange gearbeitet.</span><span class="richtig">✅ Wir haben lange gearbeitet.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich bin gefliegt.</span><span class="richtig">✅ Ich bin geflogen.</span></div></div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele</div>
+    <div class="section-body">
+      <div class="beispiele-grid">
+        <div class="beispiel-box">Sie ist mit dem Zug gefahren.</div>
+        <div class="beispiel-box">Du bist letzte Woche nach Rom geflogen.</div>
+        <div class="beispiel-box">Wir sind am Wochenende gewandert.</div>
+        <div class="beispiel-box">Habt ihr die Wohnung geputzt?</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 20 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

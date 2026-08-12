@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 23</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 9mm 12mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #1e293b; padding-bottom: 4px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 16px; font-weight: 700; color: #1e293b; }
+.doc-header h2 { font-size: 10px; font-weight: 500; color: #475569; margin-top: 1px; }
+.doc-header .badge { font-size: 9px; font-weight: 600; background: #e2e8f0; color: #1e293b; padding: 2px 9px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 10.5px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 2.5px 8px; border-radius: 4px 4px 0 0; margin-top: 5px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 5px 8px; margin-bottom: 2px; }
+
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+.trenn-box { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.trenn-item { background: white; border: 1px solid #93c5fd; border-radius: 7px; padding: 4px 10px; text-align: center; }
+.trenn-item .inf { font-size: 8.5px; color: #64748b; margin-bottom: 1px; }
+.trenn-item .form { font-size: 10px; font-weight: 700; color: #1e3a8a; }
+.trenn-item .praefix { color: #b45309; font-weight: 800; }
+.reg-item { background: white; border: 1px solid #86efac; border-radius: 7px; padding: 4px 10px; font-size: 10px; font-weight: 700; color: #15803d; }
+
+.subbox { border: 1.5px solid #86efac; border-radius: 8px; padding: 5px 8px; margin-bottom: 4px; background: white; }
+.subbox:last-child { margin-bottom: 0; }
+.subbox-titel { font-weight: 800; color: #15803d; font-size: 9.5px; margin-bottom: 3px; }
+.subbox .beispiel { font-size: 9.5px; color: #1a1a1a; font-weight: 600; margin-bottom: 1px; }
+.subbox .beispiel:last-child { margin-bottom: 0; }
+.subbox .hi { font-weight: 800; }
+.hi-und { color: #1e40af; }
+.hi-aber { color: #1e40af; }
+.hi-denn { color: #7e22ce; }
+.hi-weil { color: #b45309; }
+
+.contrast-flow { display: flex; flex-direction: column; align-items: center; gap: 1px; text-align: center; }
+.cf-line { font-size: 9.5px; }
+.cf-note { font-size: 8px; color: #64748b; font-style: italic; }
+
+.denn-weil-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.dw-card { border: 1.5px solid #86efac; border-radius: 8px; padding: 5px 6px; background: #f0fdf4; text-align: center; }
+.dw-card .dw-titel { font-weight: 800; font-size: 9.5px; margin-bottom: 3px; }
+.dw-card.denn .dw-titel { color: #7e22ce; }
+.dw-card.weil .dw-titel { color: #b45309; }
+.dw-box { font-size: 9px; font-weight: 700; padding: 1px 0; }
+.dw-arrow { color: #94a3b8; font-size: 8px; }
+.dw-card .dw-hi { padding: 0 5px; border-radius: 3px; }
+.dw-card.denn .dw-hi { background: #e9d5ff; color: #6b21a8; }
+.dw-card.weil .dw-hi { background: #fef08a; color: #854d0e; }
+.dw-card .dw-note { font-size: 7.5px; color: #64748b; font-style: italic; margin-top: 2px; }
+.dw-verb { background: #fecaca; color: #7c2d12; padding: 0 5px; border-radius: 3px; font-weight: 800; }
+
+.satz-legende { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; font-size: 8.5px; }
+.leg-item { display: flex; align-items: center; gap: 3px; }
+.leg-swatch { width: 9px; height: 9px; border-radius: 3px; display: inline-block; }
+.sw-subjekt { background: #60a5fa; }
+.sw-verb { background: #f87171; }
+.sw-erg { background: #4ade80; }
+.sw-konnekt { background: #c084fc; }
+
+.satzbau-box { display: flex; flex-direction: column; gap: 2px; }
+.satz-group-label { font-weight: 700; color: #78350f; font-size: 8.7px; margin-bottom: 1px; background: #fef3c7; display: inline-block; padding: 1px 6px; border-radius: 4px; border: 1px solid #fde68a; }
+.satz-pair { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 9.5px; }
+.satz-row .cell { padding: 2px 6px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.cell.subjekt { background: #bfdbfe; }
+.cell.verb { background: #fecaca; }
+.cell.erg { background: #bbf7d0; }
+.cell.konnekt { background: #e9d5ff; }
+
+.wort-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.wort-group h4 { font-size: 8.7px; font-weight: 700; color: #9a3412; text-transform: uppercase; margin-bottom: 2px; }
+.wort-pills { display: flex; flex-wrap: wrap; gap: 3px; }
+.pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 1.5px 5px; font-size: 8.7px; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 2.5px 7px; margin-bottom: 2px; background: white; font-size: 9.5px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 3px 7px; font-size: 9.5px; background: white; color: #4c1d95; font-weight: 600; }
+
+.footer { margin-top: 5px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 23 — E-Mails & Briefe</h2>
+    </div>
+    <div class="badge">A1 · Lektion 23</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben — Korrespondenz</div>
+    <div class="section-body">
+      <div class="pg-titel" style="text-align:center; margin-bottom:3px;">Trennbar — Präfix wandert ans Ende</div>
+      <div class="trenn-box" style="margin-bottom:6px;">
+        <div class="trenn-item">
+          <div class="inf">einladen ⚠️</div>
+          <div class="form">ich lade ... <span class="praefix">ein</span></div>
+        </div>
+        <div class="trenn-item">
+          <div class="inf">absagen ⚠️</div>
+          <div class="form">ich sage ... <span class="praefix">ab</span></div>
+        </div>
+      </div>
+      <div class="pg-titel" style="text-align:center; margin-bottom:3px;">Regelmäßig</div>
+      <div class="trenn-box">
+        <div class="reg-item">antworten</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik</div>
+    <div class="section-body">
+      <div class="subbox">
+        <div class="subbox-titel">🟩 und & aber</div>
+        <div class="beispiel">Ich schreibe eine E-Mail, <span class="hi hi-und">und</span> ich lade dich ein.</div>
+        <div class="beispiel">Ich möchte kommen, <span class="hi hi-aber">aber</span> ich habe keine Zeit.</div>
+      </div>
+
+      <div class="subbox">
+        <div class="subbox-titel">🟩 denn vs. weil</div>
+        <div class="denn-weil-grid">
+          <div class="dw-card denn">
+            <div class="dw-titel">denn</div>
+            <div class="dw-box">Ich komme nicht,</div>
+            <div class="dw-arrow">↓</div>
+            <div class="dw-box"><span class="dw-hi">denn</span></div>
+            <div class="dw-arrow">↓</div>
+            <div class="dw-box">ich <span class="dw-verb">bin</span> krank.</div>
+            <div class="dw-note">Verb direkt nach Subjekt (Pos. 2)</div>
+          </div>
+          <div class="dw-card weil">
+            <div class="dw-titel">weil</div>
+            <div class="dw-box">Ich komme nicht,</div>
+            <div class="dw-arrow">↓</div>
+            <div class="dw-box"><span class="dw-hi">weil</span></div>
+            <div class="dw-arrow">↓</div>
+            <div class="dw-box">ich krank <span class="dw-verb">bin</span>.</div>
+            <div class="dw-note">Verb ganz am Satzende</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subbox">
+        <div class="subbox-titel">🟩 Sie / du</div>
+        <div style="display:flex; gap:10px; justify-content:center; font-size:9.5px; font-weight:700;">
+          <span style="color:#1e40af;">🔵 formell: Sie</span>
+          <span style="color:#15803d;">🟢 informell: du</span>
+          <span style="color:#b91c1c;">⚠️ niemals mischen</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau</div>
+    <div class="section-body">
+      <div class="satz-legende">
+        <div class="leg-item"><span class="leg-swatch sw-subjekt"></span>Subjekt</div>
+        <div class="leg-item"><span class="leg-swatch sw-verb"></span>Verb</div>
+        <div class="leg-item"><span class="leg-swatch sw-erg"></span>Ergänzung</div>
+        <div class="leg-item"><span class="leg-swatch sw-konnekt"></span>Konjunktion</div>
+      </div>
+      <div class="satzbau-box">
+        <div>
+          <div class="satz-group-label">und (Position 2 bleibt)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">schreibe,</div><div class="cell konnekt">und</div><div class="cell erg">ich lade dich ein.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Anna</div><div class="cell verb">schreibt,</div><div class="cell konnekt">und</div><div class="cell erg">Tom antwortet.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">aber (Position 2 bleibt)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">möchte,</div><div class="cell konnekt">aber</div><div class="cell erg">ich habe keine Zeit.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Er</div><div class="cell verb">möchte,</div><div class="cell konnekt">aber</div><div class="cell erg">er kann nicht.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">denn (Position 2 bleibt)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">komme nicht,</div><div class="cell konnekt">denn</div><div class="cell erg">ich bin krank.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Sie</div><div class="cell verb">kommt später,</div><div class="cell konnekt">denn</div><div class="cell erg">sie muss arbeiten.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">weil (Verb ans Ende)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">komme nicht,</div><div class="cell konnekt">weil</div><div class="cell erg">ich krank bin.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Wir</div><div class="cell verb">sagen ab,</div><div class="cell konnekt">weil</div><div class="cell erg">das Wetter schlecht ist.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter</div>
+    <div class="section-body">
+      <div class="wort-row2">
+        <div class="wort-group">
+          <h4>Anrede & Gruß 🟢 informell</h4>
+          <div class="wort-pills">
+            <span class="pill">Liebe/r ...</span>
+            <span class="pill">Hallo ...</span>
+            <span class="pill">Viele Grüße</span>
+          </div>
+        </div>
+        <div class="wort-group">
+          <h4>Anrede & Gruß 🔵 formell</h4>
+          <div class="wort-pills">
+            <span class="pill">Sehr geehrte/r ...</span>
+            <span class="pill">Sehr geehrte Damen und Herren</span>
+            <span class="pill">Mit freundlichen Grüßen</span>
+          </div>
+        </div>
+      </div>
+      <div class="wort-group" style="margin-top:5px;">
+        <h4>Korrespondenz</h4>
+        <div class="wort-pills">
+          <span class="pill">der Betreff</span>
+          <span class="pill">der Empfänger</span>
+          <span class="pill">der Absender</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung</div>
+    <div class="section-body">
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich komme nicht, weil ich bin krank.</span><span class="richtig">✅ Ich komme nicht, weil ich krank bin.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich komme nicht, denn bin ich krank.</span><span class="richtig">✅ Ich komme nicht, denn ich bin krank.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich schreibe aber ich habe wenig Zeit.</span><span class="richtig">✅ Ich schreibe, aber ich habe wenig Zeit.</span></div></div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele</div>
+    <div class="section-body">
+      <div class="beispiele-grid">
+        <div class="beispiel-box">Ich komme nicht, weil ich krank bin.</div>
+        <div class="beispiel-box">Ich möchte kommen, aber ich habe keine Zeit.</div>
+        <div class="beispiel-box">Liebe Anna, ...</div>
+        <div class="beispiel-box">Sehr geehrte Damen und Herren, ...</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 23 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

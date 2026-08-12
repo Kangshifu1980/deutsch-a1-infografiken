@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 4</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 10mm 13mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #1e293b; padding-bottom: 4px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 17px; font-weight: 700; color: #1e293b; }
+.doc-header h2 { font-size: 10.5px; font-weight: 500; color: #475569; margin-top: 1px; }
+.doc-header .badge { font-size: 9.5px; font-weight: 600; background: #e2e8f0; color: #1e293b; padding: 2px 9px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 3px 8px; border-radius: 4px 4px 0 0; margin-top: 6px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 6px 9px; margin-bottom: 2px; }
+
+/* Blockfarben */
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+table { width: 100%; border-collapse: collapse; }
+table.konj th { background: #374151; color: white; font-size: 9px; font-weight: 700; padding: 1.5px 3px; text-align: center; border: 0.5px solid #4b5563; }
+table.konj th.pronomen-col { background: #1e3a8a; text-align: left; width: 58px; }
+table.konj td { padding: 1.5px 3px; border: 0.5px solid #e2e8f0; font-size: 9.5px; text-align: center; background: white; }
+table.konj td.pronomen { background: #f1f5f9; font-weight: 700; color: #1e3a8a; text-align: left; font-size: 9px; }
+table.konj tr:nth-child(even) td:not(.pronomen) { background: #f8fafc; }
+table.konj td.irregular { color: #b45309; font-weight: 700; }
+
+.verben-split { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.verb-block h4 { font-size: 10px; font-weight: 700; color: #1e3a8a; margin-bottom: 2px; }
+.verb-block .tag { display:inline-block; font-size: 8.5px; font-weight:700; padding: 1px 5px; border-radius: 10px; margin-left: 4px; }
+.tag.reg { background:#dcfce7; color:#14532d; }
+.tag.irr { background:#fef3c7; color:#92400e; }
+.weitere-verben { font-size: 9.5px; color: #1e3a8a; margin-top: 3px; }
+.weitere-verben .lbl { font-weight: 700; color: #64748b; text-transform: uppercase; font-size: 8.5px; }
+.irr-stack { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+
+.gram-rule { border-left: 3px solid #16a34a; background: white; border-radius: 0 6px 6px 0; padding: 3px 7px; margin-bottom: 3px; font-size: 10px; }
+.gram-rule strong { color: #15803d; }
+
+/* Satzbau-Legende */
+.satz-legende { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 5px; font-size: 9px; }
+.leg-item { display: flex; align-items: center; gap: 4px; }
+.leg-swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.sw-subjekt { background: #60a5fa; }
+.sw-verb { background: #f87171; }
+.sw-frage { background: #a78bfa; }
+.sw-erg { background: #4ade80; }
+
+.satzbau-box { display: flex; flex-direction: column; gap: 3px; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 10px; }
+.satz-row .cell { padding: 2px 7px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.satz-row .label { min-width: 82px; font-weight: 700; color: #78350f; background: #fef3c7; display:flex; align-items:center; padding: 2px 7px; border: 1px solid #fde68a; }
+.cell.subjekt { background: #bfdbfe; }
+.cell.verb { background: #fecaca; }
+.cell.frage { background: #ddd6fe; }
+.cell.erg { background: #bbf7d0; }
+
+.wort-groups { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 5px; }
+.wort-group h4 { font-size: 9px; font-weight: 700; color: #9a3412; text-transform: uppercase; margin-bottom: 2px; }
+.wort-pills { display: flex; flex-wrap: wrap; gap: 3px; }
+.pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 1.5px 5px; font-size: 9px; }
+
+.zahlen-title { font-size: 9.5px; font-weight: 700; color: #9a3412; text-transform: uppercase; margin-bottom: 2px; }
+.zahlen-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; margin-bottom: 3px; }
+.zahl-cell { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 2px 4px; text-align: center; font-size: 9.5px; }
+.zahl-cell .num { color: #9a3412; font-weight: 700; margin-right: 2px; }
+.zahl-cell.warn-cell { border-color: #f87171; background: #fff1f1; }
+.zahlen-beispiel { font-size: 9px; color: #78350f; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 3px 7px; margin-bottom: 3px; background: white; font-size: 10px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 1px; }
+.achtung-item .row:last-child { margin-bottom: 0; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 4px 8px; font-size: 10px; background: white; color: #4c1d95; font-weight: 600; }
+
+.footer { margin-top: 6px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8.5px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 4 — Kontaktdaten & Wohnort</h2>
+    </div>
+    <div class="badge">A1 · Lektion 4</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben</div>
+    <div class="section-body">
+      <div class="verben-split">
+        <div class="verb-block">
+          <h4>wohnen <span class="tag reg">regelmäßig</span></h4>
+          <table class="konj">
+            <thead><tr><th class="pronomen-col">Pronomen</th><th>wohnen</th></tr></thead>
+            <tbody>
+              <tr><td class="pronomen">ich</td><td>wohne</td></tr>
+              <tr><td class="pronomen">du</td><td>wohnst</td></tr>
+              <tr><td class="pronomen">er/sie/es</td><td>wohnt</td></tr>
+              <tr><td class="pronomen">wir</td><td>wohnen</td></tr>
+              <tr><td class="pronomen">ihr</td><td>wohnt</td></tr>
+              <tr><td class="pronomen">sie/Sie</td><td>wohnen</td></tr>
+            </tbody>
+          </table>
+          <div class="weitere-verben"><span class="lbl">Weitere regelmäßige Verben:</span> schreiben (schreibe, schreibst, schreibt …)</div>
+        </div>
+        <div class="verb-block">
+          <h4>senden &amp; antworten <span class="tag irr">Hilfs-e-Regel</span></h4>
+          <div class="irr-stack">
+            <table class="konj">
+              <thead><tr><th class="pronomen-col">Pronomen</th><th>senden</th></tr></thead>
+              <tbody>
+                <tr><td class="pronomen">ich</td><td>sende</td></tr>
+                <tr><td class="pronomen">du</td><td class="irregular">sendest</td></tr>
+                <tr><td class="pronomen">er/sie/es</td><td class="irregular">sendet</td></tr>
+                <tr><td class="pronomen">wir</td><td>senden</td></tr>
+                <tr><td class="pronomen">ihr</td><td class="irregular">sendet</td></tr>
+                <tr><td class="pronomen">sie/Sie</td><td>senden</td></tr>
+              </tbody>
+            </table>
+            <table class="konj">
+              <thead><tr><th class="pronomen-col">Pronomen</th><th>antworten</th></tr></thead>
+              <tbody>
+                <tr><td class="pronomen">ich</td><td>antworte</td></tr>
+                <tr><td class="pronomen">du</td><td class="irregular">antwortest</td></tr>
+                <tr><td class="pronomen">er/sie/es</td><td class="irregular">antwortet</td></tr>
+                <tr><td class="pronomen">wir</td><td>antworten</td></tr>
+                <tr><td class="pronomen">ihr</td><td class="irregular">antwortet</td></tr>
+                <tr><td class="pronomen">sie/Sie</td><td>antworten</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik</div>
+    <div class="section-body">
+      <div class="gram-rule"><strong>Zahlen ab 21:</strong> Einer + „und" + Zehner — z.B. 43 = dreiundvierzig</div>
+      <div class="gram-rule"><strong>Hilfs-e:</strong> Stamm endet auf -d/-t (senden, antworten) → extra „e" vor -st/-t (du/er/ihr)</div>
+      <div class="gram-rule"><strong>Frage nach Infos:</strong> Wie ist + dein/deine / Ihr/Ihre + Nomen?</div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau</div>
+    <div class="section-body">
+      <div class="satz-legende">
+        <div class="leg-item"><span class="leg-swatch sw-subjekt"></span>Subjekt</div>
+        <div class="leg-item"><span class="leg-swatch sw-verb"></span>Verb</div>
+        <div class="leg-item"><span class="leg-swatch sw-frage"></span>Fragewort</div>
+        <div class="leg-item"><span class="leg-swatch sw-erg"></span>Ergänzung</div>
+      </div>
+      <div class="satzbau-box">
+        <div class="satz-row">
+          <div class="label">Aussage</div>
+          <div class="cell subjekt">Ich</div><div class="cell verb">wohne</div><div class="cell erg">in Berlin.</div>
+        </div>
+        <div class="satz-row">
+          <div class="label">Frage (du)</div>
+          <div class="cell frage">Wie</div><div class="cell verb">ist</div><div class="cell subjekt">deine Adresse?</div>
+        </div>
+        <div class="satz-row">
+          <div class="label">Frage (Sie)</div>
+          <div class="cell frage">Wie</div><div class="cell verb">ist</div><div class="cell subjekt">Ihre Telefonnummer?</div>
+        </div>
+        <div class="satz-row">
+          <div class="label">Kommunikation</div>
+          <div class="cell subjekt">Er</div><div class="cell verb">antwortet</div><div class="cell erg">sofort.</div>
+        </div>
+      </div>
+      <div style="font-size:9px; color:#78350f; font-style:italic; margin-top:4px;">* bei „sein" steht das Subjekt oft nach dem Verb</div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter</div>
+    <div class="section-body">
+      <div class="wort-groups">
+        <div class="wort-group">
+          <h4>Adresse</h4>
+          <div class="wort-pills">
+            <span class="pill">die Adresse</span>
+            <span class="pill">die Straße</span>
+            <span class="pill">die Hausnummer</span>
+            <span class="pill">die PLZ</span>
+            <span class="pill">die Stadt</span>
+            <span class="pill">das Land</span>
+          </div>
+        </div>
+        <div class="wort-group">
+          <h4>Persönliche Daten</h4>
+          <div class="wort-pills">
+            <span class="pill">der Vorname</span>
+            <span class="pill">der Nachname</span>
+            <span class="pill">das Geburtsdatum</span>
+            <span class="pill">die Telefonnummer</span>
+            <span class="pill">die E-Mail-Adresse</span>
+          </div>
+        </div>
+        <div class="wort-group">
+          <h4>E-Mail-Zeichen</h4>
+          <div class="wort-pills">
+            <span class="pill">@ = at</span>
+            <span class="pill">. = Punkt</span>
+            <span class="pill">- = Bindestrich</span>
+            <span class="pill">_ = Unterstrich</span>
+          </div>
+        </div>
+      </div>
+      <div class="zahlen-title">Zahlen — Zehner 20–100</div>
+      <div class="zahlen-grid">
+        <div class="zahl-cell"><span class="num">20</span>zwanzig</div>
+        <div class="zahl-cell"><span class="num">30</span>dreißig</div>
+        <div class="zahl-cell"><span class="num">40</span>vierzig</div>
+        <div class="zahl-cell"><span class="num">50</span>fünfzig</div>
+        <div class="zahl-cell warn-cell"><span class="num">60</span>sechzig ⚠️</div>
+        <div class="zahl-cell warn-cell"><span class="num">70</span>siebzig ⚠️</div>
+        <div class="zahl-cell"><span class="num">80</span>achtzig</div>
+        <div class="zahl-cell"><span class="num">90</span>neunzig</div>
+        <div class="zahl-cell"><span class="num">100</span>hundert</div>
+      </div>
+      <div class="zahlen-beispiel">Beispiel: 43 = drei<strong>und</strong>vierzig</div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung</div>
+    <div class="section-body">
+      <div class="achtung-item">
+        <div class="row"><span class="falsch">❌ 34 (bei „dreiundvierzig")</span><span class="richtig">✅ 43</span></div>
+      </div>
+      <div class="achtung-item">
+        <div class="row"><span class="falsch">❌ du antwortst</span><span class="richtig">✅ du antwortest</span></div>
+        <div class="row"><span class="falsch">❌ er sendt</span><span class="richtig">✅ er sendet</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele</div>
+    <div class="section-body">
+      <div class="beispiele-grid">
+        <div class="beispiel-box">Ich wohne in Berlin.</div>
+        <div class="beispiel-box">Wie ist deine E-Mail-Adresse?</div>
+        <div class="beispiel-box">Er antwortet sofort auf die E-Mail.</div>
+        <div class="beispiel-box">Ich sende das Formular per Post.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 4 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

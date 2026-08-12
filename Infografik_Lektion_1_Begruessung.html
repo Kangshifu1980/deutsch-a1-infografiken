@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infografik — Deutsch A1 — Lektion 1</title>
+<style>
+@media print {
+  body { margin: 0; }
+  .page { box-shadow: none !important; margin: 0 !important; min-height: 0 !important; }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.35; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 12mm 14mm 8mm 14mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #2563eb; padding-bottom: 5px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 17px; font-weight: 700; color: #1e3a8a; letter-spacing: 0.3px; }
+.doc-header h2 { font-size: 11px; font-weight: 500; color: #475569; margin-top: 2px; }
+.doc-header .badge { font-size: 10px; font-weight: 600; background: #dbeafe; color: #1e40af; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+.section-title { font-size: 11.5px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #64748b; margin: 12px 0 5px 0; border-bottom: 0.5px solid #e2e8f0; padding-bottom: 2px; }
+.section-title:first-of-type { margin-top: 0; }
+
+/* VERBEN */
+.verben-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.verb-block { border: 0.5px solid #e2e8f0; border-radius: 8px; padding: 8px 10px; }
+.verb-block h4 { font-size: 10.5px; font-weight: 700; color: #1e3a8a; margin-bottom: 5px; }
+table.konj { width: 100%; border-collapse: collapse; table-layout: fixed; margin-bottom: 4px; }
+table.konj th { background: #1e3a8a; color: white; font-size: 10px; font-weight: 700; padding: 3px 5px; text-align: center; border: 0.5px solid #1e40af; }
+table.konj th.pronomen-col { background: #374151; text-align: left; }
+table.konj td { padding: 2.5px 5px; border: 0.5px solid #e2e8f0; font-size: 10.5px; text-align: center; }
+table.konj td.pronomen { background: #f1f5f9; font-weight: 700; color: #1e3a8a; text-align: left; font-size: 10px; }
+table.konj tr:nth-child(even) td:not(.pronomen) { background: #f8fafc; }
+table.konj td.irregular { color: #b45309; font-weight: 700; }
+table.konj td.beispiel { text-align: left; font-size: 9.5px; color: #374151; }
+
+/* GRAMMATIK */
+.gram-box { border: 0.5px solid #e2e8f0; border-radius: 6px; padding: 6px 10px; margin-bottom: 5px; background: #fafafa; }
+.gram-box .rule { font-size: 10.5px; color: #1a1a1a; }
+.gram-box .rule b { color: #1e3a8a; }
+
+/* SATZBAU */
+.satzbau { display: flex; gap: 6px; margin: 6px 0; flex-wrap: wrap; }
+.satzbau .pos { border-radius: 6px; padding: 5px 10px; text-align: center; flex: 1; min-width: 70px; }
+.satzbau .pos .pos-num { font-size: 8.5px; font-weight: 700; color: #64748b; text-transform: uppercase; }
+.satzbau .pos .pos-label { font-size: 10.5px; font-weight: 700; }
+.satzbau .pos.subj { background: #dbeafe; border: 1px solid #93c5fd; }
+.satzbau .pos.subj .pos-label { color: #1e40af; }
+.satzbau .pos.verb { background: #fef3c7; border: 1px solid #fcd34d; }
+.satzbau .pos.verb .pos-label { color: #92400e; }
+.satzbau .pos.rest { background: #dcfce7; border: 1px solid #86efac; }
+.satzbau .pos.rest .pos-label { color: #14532d; }
+.satzbau .pos.frage { background: #fce7f3; border: 1px solid #f9a8d4; }
+.satzbau .pos.frage .pos-label { color: #9d174d; }
+.satzbau-label { font-size: 9.5px; font-weight: 700; color: #64748b; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.4px; }
+
+/* WICHTIGE WÖRTER */
+.wort-gruppen { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+.wort-gruppe { border: 0.5px solid #e2e8f0; border-radius: 6px; padding: 6px 8px; background: #f8fafc; }
+.wort-gruppe h5 { font-size: 9.5px; font-weight: 700; color: #075985; text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; }
+.wort-gruppe .wort-item { font-size: 10.5px; margin-bottom: 2px; }
+.der { display:inline-block; background:#dbeafe; color:#1e40af; font-weight:700; font-size:9px; padding:0px 4px; border-radius:4px; margin-right:2px; }
+.die { display:inline-block; background:#fce7f3; color:#9d174d; font-weight:700; font-size:9px; padding:0px 4px; border-radius:4px; margin-right:2px; }
+
+/* ACHTUNG */
+.warn-box { background: #fff7ed; border-left: 3px solid #ea580c; border-radius: 0 6px 6px 0; padding: 6px 10px; margin: 4px 0; }
+.fehler-item { margin-bottom: 4px; padding-bottom: 4px; border-bottom: 1px dashed #fed7aa; }
+.fehler-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.fehler-item .falsch { color: #b91c1c; font-weight: 700; font-size: 10.5px; }
+.fehler-item .richtig { color: #15803d; font-weight: 700; font-size: 10.5px; }
+
+/* BEISPIELE */
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.beispiel-item { border: 0.5px solid #e2e8f0; border-radius: 6px; padding: 6px 10px; font-size: 10.5px; background: #fafafa; }
+
+.footer { margin-top: 14px; padding-top: 5px; border-top: 0.5px solid #e2e8f0; font-size: 9px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 1 — Begrüßung &amp; Sich vorstellen</h2>
+    </div>
+    <div class="badge">A1 · Lektion 1</div>
+  </div>
+
+  <div class="section-title">🔹 Verben</div>
+  <div class="verben-grid">
+    <div class="verb-block">
+      <h4>Regelmäßig — heißen</h4>
+      <table class="konj">
+        <colgroup><col style="width:32%"><col style="width:30%"><col style="width:38%"></colgroup>
+        <thead><tr><th class="pronomen-col">Pron.</th><th>heißen</th><th>Beispiel</th></tr></thead>
+        <tbody>
+          <tr><td class="pronomen">ich</td><td><strong>heiße</strong></td><td class="beispiel">Ich heiße Max.</td></tr>
+          <tr><td class="pronomen">du</td><td class="irregular"><strong>heißt</strong></td><td class="beispiel">Du heißt Lisa.</td></tr>
+          <tr><td class="pronomen">er/sie/es</td><td><strong>heißt</strong></td><td class="beispiel">Sie heißt Anna.</td></tr>
+          <tr><td class="pronomen">wir</td><td><strong>heißen</strong></td><td class="beispiel">Wir heißen …</td></tr>
+          <tr><td class="pronomen">ihr</td><td><strong>heißt</strong></td><td class="beispiel">Ihr heißt …</td></tr>
+          <tr><td class="pronomen">sie/Sie</td><td><strong>heißen</strong></td><td class="beispiel">Sie heißen Müller.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="verb-block">
+      <h4>Unregelmäßig — sein</h4>
+      <table class="konj">
+        <colgroup><col style="width:32%"><col style="width:30%"><col style="width:38%"></colgroup>
+        <thead><tr><th class="pronomen-col">Pron.</th><th>sein</th><th>Beispiel</th></tr></thead>
+        <tbody>
+          <tr><td class="pronomen">ich</td><td class="irregular"><strong>bin</strong></td><td class="beispiel">Ich bin müde.</td></tr>
+          <tr><td class="pronomen">du</td><td class="irregular"><strong>bist</strong></td><td class="beispiel">Du bist nett.</td></tr>
+          <tr><td class="pronomen">er/sie/es</td><td class="irregular"><strong>ist</strong></td><td class="beispiel">Er ist Lehrer.</td></tr>
+          <tr><td class="pronomen">wir</td><td class="irregular"><strong>sind</strong></td><td class="beispiel">Wir sind hier.</td></tr>
+          <tr><td class="pronomen">ihr</td><td class="irregular"><strong>seid</strong></td><td class="beispiel">Ihr seid pünktlich.</td></tr>
+          <tr><td class="pronomen">sie/Sie</td><td class="irregular"><strong>sind</strong></td><td class="beispiel">Sie sind Kollegen.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-title">🔹 Grammatik</div>
+  <div class="gram-box">
+    <div class="rule"><b>Aussagesatz:</b> Position 1 (Subjekt) + Position 2 (Verb) + Rest.</div>
+  </div>
+  <div class="gram-box">
+    <div class="rule"><b>heißen:</b> „du" und „er/sie/es" teilen dieselbe Form — heißt.</div>
+  </div>
+  <div class="gram-box">
+    <div class="rule"><b>W-Frage:</b> Fragewort + Verb + Subjekt (nicht wie im Aussagesatz).</div>
+  </div>
+
+  <div class="section-title">🔹 Satzbau</div>
+  <div class="satzbau-label">Aussagesatz</div>
+  <div class="satzbau">
+    <div class="pos subj"><div class="pos-num">Pos. 1</div><div class="pos-label">Ich</div></div>
+    <div class="pos verb"><div class="pos-num">Pos. 2</div><div class="pos-label">heiße</div></div>
+    <div class="pos rest"><div class="pos-num">Rest</div><div class="pos-label">Max.</div></div>
+  </div>
+  <div class="satzbau-label">W-Frage</div>
+  <div class="satzbau">
+    <div class="pos frage"><div class="pos-num">Pos. 1</div><div class="pos-label">Wie</div></div>
+    <div class="pos verb"><div class="pos-num">Pos. 2</div><div class="pos-label">heißt</div></div>
+    <div class="pos subj"><div class="pos-num">Pos. 3</div><div class="pos-label">du?</div></div>
+  </div>
+
+  <div class="section-title">🔹 Wichtige Wörter</div>
+  <div class="wort-gruppen">
+    <div class="wort-gruppe">
+      <h5>Begrüßung &amp; Abschied</h5>
+      <div class="wort-item">Hallo</div>
+      <div class="wort-item">Guten Tag</div>
+      <div class="wort-item">Tschüss</div>
+      <div class="wort-item">Auf Wiedersehen</div>
+    </div>
+    <div class="wort-gruppe">
+      <h5>Personen</h5>
+      <div class="wort-item"><span class="der">der</span>Name</div>
+      <div class="wort-item"><span class="der">der</span>Vorname</div>
+      <div class="wort-item"><span class="der">der</span>Nachname</div>
+    </div>
+    <div class="wort-gruppe">
+      <h5>Fragen &amp; Herkunft</h5>
+      <div class="wort-item"><span class="die">die</span>Begrüßung</div>
+      <div class="wort-item"><span class="der">der</span>Abschied</div>
+      <div class="wort-item">kommen (aus)</div>
+      <div class="wort-item">woher?</div>
+    </div>
+  </div>
+
+  <div class="section-title">🔹 Achtung</div>
+  <div class="warn-box">
+    <div class="fehler-item">
+      <div><span class="falsch">❌ Ihr sind hier.</span></div>
+      <div><span class="richtig">✅ Ihr seid hier.</span></div>
+    </div>
+    <div class="fehler-item">
+      <div><span class="falsch">❌ du heißst</span></div>
+      <div><span class="richtig">✅ du heißt</span></div>
+    </div>
+    <div class="fehler-item">
+      <div><span class="falsch">❌ Wie du heißt?</span></div>
+      <div><span class="richtig">✅ Wie heißt du?</span></div>
+    </div>
+  </div>
+
+  <div class="section-title">🔹 Beispiele</div>
+  <div class="beispiele-grid">
+    <div class="beispiel-item">Ich heiße Max.</div>
+    <div class="beispiel-item">Wie heißt du?</div>
+    <div class="beispiel-item">Ich bin aus Hamburg.</div>
+    <div class="beispiel-item">Wie heißen Sie?</div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 1 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

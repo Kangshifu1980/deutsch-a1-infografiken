@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 22</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 9mm 12mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #1e293b; padding-bottom: 4px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 16px; font-weight: 700; color: #1e293b; }
+.doc-header h2 { font-size: 10px; font-weight: 500; color: #475569; margin-top: 1px; }
+.doc-header .badge { font-size: 9px; font-weight: 600; background: #e2e8f0; color: #1e293b; padding: 2px 9px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 10.5px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 2.5px 8px; border-radius: 4px 4px 0 0; margin-top: 5px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 5px 8px; margin-bottom: 2px; }
+
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+.meinung-chips { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+.meinung-chip { background: white; border: 1px solid #93c5fd; border-radius: 7px; padding: 4px 10px; font-size: 10px; font-weight: 700; color: #1e3a8a; }
+
+.subbox { border: 1.5px solid #86efac; border-radius: 8px; padding: 5px 8px; margin-bottom: 4px; background: white; }
+.subbox:last-child { margin-bottom: 0; }
+.subbox-titel { font-weight: 800; color: #15803d; font-size: 9.5px; margin-bottom: 3px; }
+
+.steig-col-titel { font-size: 8px; font-weight: 800; color: #15803d; text-transform: uppercase; margin-bottom: 2px; text-align: center; }
+.steig-col { border: 1px solid #86efac; border-radius: 6px; background: #f0fdf4; padding: 3px 5px; }
+.steig-col.umlaut { border-color: #93c5fd; background: #eff6ff; }
+.steig-col.irr { border-color: #fbbf24; background: #fffbeb; }
+.steig-item { font-size: 8.7px; text-align: center; line-height: 1.35; padding: 1px 0; color: #1a1a1a; }
+.steig-item b { color: #14532d; }
+.steig-col.umlaut .steig-item b { color: #1e40af; }
+.steig-col.irr .steig-item b { color: #92400e; }
+.steig-cols-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+
+.gram-rule { border-left: 3px solid #16a34a; background: white; border-radius: 0 6px 6px 0; padding: 3px 7px; margin-bottom: 3px; font-size: 9.5px; }
+.gram-rule strong { color: #15803d; }
+
+.formel-chain { display: flex; align-items: center; justify-content: center; gap: 5px; margin-bottom: 4px; flex-wrap: wrap; }
+.fc-box { padding: 3px 9px; border-radius: 6px; font-weight: 800; font-size: 10px; }
+.fc-box.a { background: #bfdbfe; color: #1e3a8a; }
+.fc-box.b { background: #fecaca; color: #7c2d12; }
+.fc-box.c { background: #bbf7d0; color: #14532d; }
+.fc-plus, .fc-eq { color: #94a3b8; font-weight: 700; }
+
+.als-flow { display: flex; flex-direction: column; align-items: center; gap: 1px; }
+.af-box { padding: 2px 12px; border-radius: 6px; font-size: 9.5px; font-weight: 700; }
+.af-box.subj { background: #bfdbfe; color: #1e3a8a; }
+.af-box.adj { background: #fecaca; color: #7c2d12; }
+.af-box.als { background: #e9d5ff; color: #6b21a8; }
+.af-arrow { color: #94a3b8; font-size: 9px; }
+
+.super-stars { display: flex; flex-direction: column; gap: 3px; }
+.star-line { display: flex; align-items: center; gap: 6px; font-size: 9.5px; }
+.star-line .label { font-weight: 700; color: #15803d; min-width: 90px; }
+.star-line .beispiel { font-weight: 700; color: #1a1a1a; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 5px; padding: 1px 8px; }
+
+.dass-flow { display: flex; flex-direction: column; align-items: center; gap: 2px; margin-bottom: 3px; }
+.df-box { padding: 3px 10px; border-radius: 6px; font-size: 9.5px; font-weight: 700; }
+.df-box.main { background: #bfdbfe; color: #1e3a8a; }
+.df-box.dass { background: #f1f5f9; color: #374151; }
+.df-box.dass .hi { background: #fef08a; color: #854d0e; padding: 0 4px; border-radius: 3px; }
+.df-box.dass .vb { background: #fecaca; color: #7c2d12; padding: 0 4px; border-radius: 3px; }
+.df-arrow { color: #94a3b8; font-size: 10px; }
+
+.satz-legende { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; font-size: 8.5px; }
+.leg-item { display: flex; align-items: center; gap: 3px; }
+.leg-swatch { width: 9px; height: 9px; border-radius: 3px; display: inline-block; }
+.sw-subjekt { background: #60a5fa; }
+.sw-verb { background: #f87171; }
+.sw-erg { background: #4ade80; }
+.sw-konnekt { background: #c084fc; }
+
+.satzbau-box { display: flex; flex-direction: column; gap: 2px; }
+.satz-group-label { font-weight: 700; color: #78350f; font-size: 8.7px; margin-bottom: 1px; background: #fef3c7; display: inline-block; padding: 1px 6px; border-radius: 4px; border: 1px solid #fde68a; }
+.satz-pair { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 9.5px; }
+.satz-row .cell { padding: 2px 6px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.cell.subjekt { background: #bfdbfe; }
+.cell.verb { background: #fecaca; }
+.cell.erg { background: #bbf7d0; }
+.cell.konnekt { background: #e9d5ff; }
+
+.wort-pills { display: flex; flex-wrap: wrap; gap: 3px; }
+.pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 1.5px 5px; font-size: 8.7px; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 2.5px 7px; margin-bottom: 2px; background: white; font-size: 9.5px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 3px 7px; font-size: 9.5px; background: white; color: #4c1d95; font-weight: 600; }
+
+.footer { margin-top: 5px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 22 — Vergleiche & Meinungen</h2>
+    </div>
+    <div class="badge">A1 · Lektion 22</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben — Meinung äußern</div>
+    <div class="section-body">
+      <div class="meinung-chips">
+        <div class="meinung-chip">Ich finde, dass ...</div>
+        <div class="meinung-chip">Ich glaube, dass ...</div>
+        <div class="meinung-chip">Ich mag ...</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik</div>
+    <div class="section-body">
+      <div class="subbox">
+        <div class="subbox-titel">🟩 Steigerung</div>
+        <div class="steig-cols-grid">
+          <div class="steig-col">
+            <div class="steig-col-titel">Regelmäßig</div>
+            <div class="steig-item">klein → <b>kleiner</b> → am kleinsten</div>
+            <div class="steig-item">schnell → <b>schneller</b> → am schnellsten</div>
+            <div class="steig-item">billig → <b>billiger</b> → am billigsten</div>
+            <div class="steig-item">interessant → <b>interessanter</b> → am interessantesten</div>
+          </div>
+          <div class="steig-col umlaut">
+            <div class="steig-col-titel">Umlaut ⚠️</div>
+            <div class="steig-item">groß → <b>größer</b> → am größten</div>
+            <div class="steig-item">alt → <b>älter</b> → am ältesten</div>
+            <div class="steig-item">jung → <b>jünger</b> → am jüngsten</div>
+            <div class="steig-item">warm → <b>wärmer</b> → am wärmsten</div>
+          </div>
+          <div class="steig-col irr">
+            <div class="steig-col-titel">Unregelmäßig ⚠️⚠️</div>
+            <div class="steig-item">gut → <b>besser</b> → am besten</div>
+            <div class="steig-item">viel → <b>mehr</b> → am meisten</div>
+            <div class="steig-item">gern → <b>lieber</b> → am liebsten</div>
+            <div class="steig-item">hoch → <b>höher</b> → am höchsten</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subbox">
+        <div class="subbox-titel">🟩 Vergleich mit als</div>
+        <div class="als-flow">
+          <div class="af-box subj">Berlin</div>
+          <span class="af-arrow">↓</span>
+          <div class="af-box adj">größer</div>
+          <span class="af-arrow">↓</span>
+          <div class="af-box als">als Hamburg</div>
+        </div>
+      </div>
+
+      <div class="subbox">
+        <div class="subbox-titel">🟩 Superlativ</div>
+        <div class="super-stars">
+          <div class="star-line">⭐ <span class="label">ohne Nomen</span><span class="beispiel">am größten</span></div>
+          <div class="star-line">⭐ <span class="label">mit Nomen</span><span class="beispiel">die größte Stadt</span></div>
+        </div>
+      </div>
+
+      <div class="subbox">
+        <div class="subbox-titel">🟩 dass-Satz</div>
+        <div style="text-align:center; font-size:10px; line-height:1.7;">
+          <div style="font-weight:700; color:#1e3a8a;">Ich finde,</div>
+          <div style="font-weight:700;">dass Berlin größer <span style="background:#fecaca; color:#7c2d12; padding:0 5px; border-radius:3px;">ist</span>.</div>
+          <div style="font-size:8.7px; color:#64748b; font-style:italic;">(Verb immer am Ende)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau</div>
+    <div class="section-body">
+      <div class="satz-legende">
+        <div class="leg-item"><span class="leg-swatch sw-subjekt"></span>Subjekt</div>
+        <div class="leg-item"><span class="leg-swatch sw-verb"></span>Verb</div>
+        <div class="leg-item"><span class="leg-swatch sw-erg"></span>Ergänzung</div>
+        <div class="leg-item"><span class="leg-swatch sw-konnekt"></span>als/dass</div>
+      </div>
+      <div class="satzbau-box">
+        <div>
+          <div class="satz-group-label">Komparativ</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Der Zug</div><div class="cell verb">ist</div><div class="cell erg">schneller</div><div class="cell konnekt">als</div><div class="cell erg">das Auto.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Berlin</div><div class="cell verb">ist</div><div class="cell erg">größer</div><div class="cell konnekt">als</div><div class="cell erg">Leipzig.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">Superlativ ① (ohne Nomen)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Berlin</div><div class="cell verb">ist</div><div class="cell erg">am größten.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Pizza</div><div class="cell verb">schmeckt</div><div class="cell erg">am besten.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">Superlativ ② (mit Nomen)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Berlin</div><div class="cell verb">ist</div><div class="cell erg">die größte Stadt.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Das</div><div class="cell verb">ist</div><div class="cell erg">der schnellste Zug.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">dass-Satz</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">finde,</div><div class="cell erg">dass Berlin größer ist.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">glaube,</div><div class="cell erg">dass es regnet.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter</div>
+    <div class="section-body">
+      <div class="wort-pills">
+        <span class="pill">Ich finde, dass ...</span>
+        <span class="pill">Ich glaube, dass ...</span>
+        <span class="pill">Ich mag ...</span>
+        <span class="pill">als</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung</div>
+    <div class="section-body">
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Der Zug ist mehr schnell als das Auto.</span><span class="richtig">✅ Der Zug ist schneller als das Auto.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Berlin ist größten.</span><span class="richtig">✅ Berlin ist am größten.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich finde, dass ist Berlin größer.</span><span class="richtig">✅ Ich finde, dass Berlin größer ist.</span></div></div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele</div>
+    <div class="section-body">
+      <div class="beispiele-grid">
+        <div class="beispiel-box">Mein Bruder ist jünger als ich.</div>
+        <div class="beispiel-box">Das ist das beste Restaurant der Stadt.</div>
+        <div class="beispiel-box">Ich glaube, dass es morgen regnet.</div>
+        <div class="beispiel-box">Ich esse am liebsten Pizza.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 22 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

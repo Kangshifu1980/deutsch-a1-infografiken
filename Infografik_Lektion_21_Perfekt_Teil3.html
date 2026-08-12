@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 21</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 9mm 12mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #1e293b; padding-bottom: 4px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 16px; font-weight: 700; color: #1e293b; }
+.doc-header h2 { font-size: 10px; font-weight: 500; color: #475569; margin-top: 1px; }
+.doc-header .badge { font-size: 9px; font-weight: 600; background: #e2e8f0; color: #1e293b; padding: 2px 9px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 10.5px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 2.5px 8px; border-radius: 4px 4px 0 0; margin-top: 5px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 5px 8px; margin-bottom: 2px; }
+
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+.pg-titel { font-size: 8.5px; font-weight: 700; color: #1e3a8a; text-transform: uppercase; margin-bottom: 2px; }
+.partizip-gruppe { margin-bottom: 4px; }
+.partizip-gruppe:last-child { margin-bottom: 0; }
+.partizip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+.partizip-grid.tr { grid-template-columns: repeat(3, 1fr); }
+.partizip-chip { background: white; border: 1px solid #93c5fd; border-radius: 5px; padding: 2px 5px; font-size: 8.7px; text-align: center; }
+.partizip-chip .inf { color: #64748b; }
+.partizip-chip .arrow { color: #2563eb; margin: 0 1px; }
+.partizip-chip .part { color: #1e3a8a; font-weight: 700; }
+.partizip-chip .hilf { font-size: 7.5px; font-weight: 800; padding: 0 3px; border-radius: 3px; margin-left: 2px; }
+.partizip-chip .hilf.h { background: #dbeafe; color: #1e40af; }
+.partizip-chip .hilf.s { background: #fef3c7; color: #92400e; }
+
+.gram-rule { border-left: 3px solid #16a34a; background: white; border-radius: 0 6px 6px 0; padding: 3px 7px; margin-bottom: 3px; font-size: 9.5px; }
+.gram-rule strong { color: #15803d; }
+
+.formel-chain { display: flex; align-items: center; justify-content: center; gap: 5px; margin-bottom: 5px; flex-wrap: wrap; }
+.fc-box { padding: 3px 9px; border-radius: 6px; font-weight: 800; font-size: 10.5px; }
+.fc-box.praefix { background: #bfdbfe; color: #1e3a8a; }
+.fc-box.ge { background: #fef08a; color: #854d0e; }
+.fc-box.stamm { background: #bbf7d0; color: #14532d; }
+.fc-box.result { background: #1e3a8a; color: white; }
+.fc-plus, .fc-eq { color: #94a3b8; font-weight: 700; }
+
+.exc-card { display: flex; align-items: center; gap: 6px; border: 1.5px solid #fde68a; background: #fffbeb; border-radius: 7px; padding: 4px 8px; margin-bottom: 4px; font-size: 9.5px; }
+.exc-card .icon { font-size: 16px; }
+
+.decision-chain { display: flex; align-items: center; justify-content: center; gap: 4px; flex-wrap: wrap; font-size: 9px; }
+.dc-box { padding: 3px 8px; border-radius: 6px; font-weight: 700; text-align: center; }
+.dc-box.frage { background: #f1f5f9; color: #374151; }
+.dc-box.sein { background: #fef3c7; color: #92400e; }
+.dc-box.haben { background: #dbeafe; color: #1e40af; }
+.dc-arrow { color: #94a3b8; }
+
+.satz-legende { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; font-size: 8.5px; }
+.leg-item { display: flex; align-items: center; gap: 3px; }
+.leg-swatch { width: 9px; height: 9px; border-radius: 3px; display: inline-block; }
+.sw-subjekt { background: #60a5fa; }
+.sw-verb { background: #f87171; }
+.sw-erg { background: #4ade80; }
+.sw-part2 { background: #fbbf24; }
+
+.satzbau-box { display: flex; flex-direction: column; gap: 2px; }
+.satz-group-label { font-weight: 700; color: #78350f; font-size: 8.7px; margin-bottom: 1px; background: #fef3c7; display: inline-block; padding: 1px 6px; border-radius: 4px; border: 1px solid #fde68a; }
+.satz-pair { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 9.5px; }
+.satz-row .cell { padding: 2px 6px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.cell.subjekt { background: #bfdbfe; }
+.cell.verb { background: #fecaca; }
+.cell.erg { background: #bbf7d0; }
+.cell.part { background: #fef08a; }
+
+.wort-pills { display: flex; flex-wrap: wrap; gap: 3px; }
+.pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 1.5px 5px; font-size: 8.7px; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 2.5px 7px; margin-bottom: 2px; background: white; font-size: 9.5px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 3px 7px; font-size: 9.5px; background: white; color: #4c1d95; font-weight: 600; }
+
+.footer { margin-top: 5px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 21 — Das Perfekt (Teil 3)</h2>
+    </div>
+    <div class="badge">A1 · Lektion 21</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben — Partizip II</div>
+    <div class="section-body">
+      <div class="partizip-gruppe">
+        <div class="pg-titel">Unregelmäßig (alle mit haben)</div>
+        <div class="partizip-grid">
+          <div class="partizip-chip"><span class="inf">essen</span><span class="arrow">→</span><span class="part">gegessen</span></div>
+          <div class="partizip-chip"><span class="inf">trinken</span><span class="arrow">→</span><span class="part">getrunken</span></div>
+          <div class="partizip-chip"><span class="inf">lesen</span><span class="arrow">→</span><span class="part">gelesen</span></div>
+          <div class="partizip-chip"><span class="inf">schreiben</span><span class="arrow">→</span><span class="part">geschrieben</span></div>
+          <div class="partizip-chip"><span class="inf">sehen</span><span class="arrow">→</span><span class="part">gesehen</span></div>
+          <div class="partizip-chip"><span class="inf">nehmen</span><span class="arrow">→</span><span class="part">genommen</span></div>
+          <div class="partizip-chip"><span class="inf">geben</span><span class="arrow">→</span><span class="part">gegeben</span></div>
+          <div class="partizip-chip"><span class="inf">finden</span><span class="arrow">→</span><span class="part">gefunden</span></div>
+          <div class="partizip-chip"><span class="inf">sprechen</span><span class="arrow">→</span><span class="part">gesprochen</span></div>
+          <div class="partizip-chip"><span class="inf">helfen</span><span class="arrow">→</span><span class="part">geholfen</span></div>
+          <div class="partizip-chip"><span class="inf">schlafen</span><span class="arrow">→</span><span class="part">geschlafen</span></div>
+          <div class="partizip-chip"><span class="inf">vergessen ⚠️</span><span class="arrow">→</span><span class="part">vergessen</span></div>
+        </div>
+      </div>
+      <div class="partizip-gruppe">
+        <div class="pg-titel">Trennbar (Hilfsverb gemischt)</div>
+        <div class="partizip-grid tr">
+          <div class="partizip-chip"><span class="inf">aufstehen</span><span class="arrow">→</span><span class="part">aufgestanden</span><span class="hilf s">sein</span></div>
+          <div class="partizip-chip"><span class="inf">einkaufen</span><span class="arrow">→</span><span class="part">eingekauft</span><span class="hilf h">haben</span></div>
+          <div class="partizip-chip"><span class="inf">fernsehen</span><span class="arrow">→</span><span class="part">ferngesehen</span><span class="hilf h">haben</span></div>
+          <div class="partizip-chip"><span class="inf">anrufen</span><span class="arrow">→</span><span class="part">angerufen</span><span class="hilf h">haben</span></div>
+          <div class="partizip-chip"><span class="inf">mitkommen</span><span class="arrow">→</span><span class="part">mitgekommen</span><span class="hilf s">sein</span></div>
+          <div class="partizip-chip"><span class="inf">zurückkommen</span><span class="arrow">→</span><span class="part">zurückgekommen</span><span class="hilf s">sein</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik</div>
+    <div class="section-body">
+      <div class="gram-rule">Unregelmäßig: Stammvokal ändert sich, Endung meist <strong>-en</strong> (nicht -t): essen → gegessen</div>
+      <div class="exc-card"><span class="icon">🚫</span><div><strong>vergessen:</strong> KEIN ge- — „ver-" ist schon unbetont</div></div>
+      <div class="gram-rule">Trennbar: „ge-" wandert <strong>mitten ins Wort</strong> (zwischen Präfix und Stamm)</div>
+      <div class="formel-chain">
+        <div class="fc-box praefix">auf</div><span class="fc-plus">+</span><div class="fc-box ge">ge</div><span class="fc-plus">+</span><div class="fc-box stamm">standen</div><span class="fc-eq">=</span><div class="fc-box result">aufgestanden</div>
+      </div>
+      <div class="gram-rule">Entscheidungs-Kette (L19+L20+L21):</div>
+      <div class="decision-chain">
+        <div class="dc-box frage">Bewegung A→B?</div><span class="dc-arrow">→ ja →</span><div class="dc-box sein">sein</div>
+        <span class="dc-arrow">| Zustandsänderung? → ja →</span><div class="dc-box sein">sein</div>
+        <span class="dc-arrow">| sonst →</span><div class="dc-box haben">haben</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau</div>
+    <div class="section-body">
+      <div class="satz-legende">
+        <div class="leg-item"><span class="leg-swatch sw-subjekt"></span>Subjekt</div>
+        <div class="leg-item"><span class="leg-swatch sw-verb"></span>haben/sein</div>
+        <div class="leg-item"><span class="leg-swatch sw-erg"></span>Ergänzung</div>
+        <div class="leg-item"><span class="leg-swatch sw-part2"></span>Partizip (Ende)</div>
+      </div>
+      <div class="satzbau-box">
+        <div>
+          <div class="satz-group-label">Unregelmäßig</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">habe</div><div class="cell erg">ein Buch</div><div class="cell part">gelesen.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Er</div><div class="cell verb">hat</div><div class="cell erg">Wasser</div><div class="cell part">getrunken.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">Trennbar + haben</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">habe</div><div class="cell part">eingekauft.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Wir</div><div class="cell verb">haben</div><div class="cell part">ferngesehen.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">Trennbar + sein</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">bin</div><div class="cell erg">heute früh</div><div class="cell part">aufgestanden.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Er</div><div class="cell verb">ist</div><div class="cell erg">zur Party</div><div class="cell part">mitgekommen.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">vergessen (kein ge-)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">habe</div><div class="cell erg">den Schlüssel</div><div class="cell part">vergessen.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Sie</div><div class="cell verb">hat</div><div class="cell erg">es</div><div class="cell part">vergessen.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter — Zeitausdrücke</div>
+    <div class="section-body">
+      <div class="wort-pills">
+        <span class="pill">gestern</span>
+        <span class="pill">vorgestern</span>
+        <span class="pill">letzte Woche</span>
+        <span class="pill">letzten Monat</span>
+        <span class="pill">letztes Jahr</span>
+        <span class="pill">neulich</span>
+        <span class="pill">vor zwei Tagen</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung</div>
+    <div class="section-body">
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich habe Pizza geesst.</span><span class="richtig">✅ Ich habe Pizza gegessen.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich habe gefernsehen.</span><span class="richtig">✅ Ich habe ferngesehen.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich habe aufgestanden.</span><span class="richtig">✅ Ich bin aufgestanden.</span></div></div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele</div>
+    <div class="section-body">
+      <div class="beispiele-grid">
+        <div class="beispiel-box">Sie hat mit ihrer Mutter gesprochen.</div>
+        <div class="beispiel-box">Er hat mir bei den Hausaufgaben geholfen.</div>
+        <div class="beispiel-box">Hast du deine Oma schon angerufen?</div>
+        <div class="beispiel-box">Wir sind zur Party mitgekommen.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 21 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

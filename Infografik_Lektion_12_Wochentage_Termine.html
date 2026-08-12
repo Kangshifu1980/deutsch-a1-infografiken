@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 12</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 10mm 13mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #1e293b; padding-bottom: 4px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 17px; font-weight: 700; color: #1e293b; }
+.doc-header h2 { font-size: 10.5px; font-weight: 500; color: #475569; margin-top: 1px; }
+.doc-header .badge { font-size: 9.5px; font-weight: 600; background: #e2e8f0; color: #1e293b; padding: 2px 9px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 3px 8px; border-radius: 4px 4px 0 0; margin-top: 6px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 6px 9px; margin-bottom: 2px; }
+
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+table { width: 100%; border-collapse: collapse; }
+table.konj th { background: #374151; color: white; font-size: 9.5px; font-weight: 700; padding: 2px 4px; text-align: center; border: 0.5px solid #4b5563; }
+table.konj th.pronomen-col { background: #1e3a8a; text-align: left; width: 70px; }
+table.konj td { padding: 2px 4px; border: 0.5px solid #e2e8f0; font-size: 10px; text-align: center; background: white; }
+table.konj td.pronomen { background: #f1f5f9; font-weight: 700; color: #1e3a8a; text-align: left; font-size: 9.5px; }
+table.konj tr:nth-child(even) td:not(.pronomen) { background: #f8fafc; }
+table.konj td.irr-form { color: #dc2626; font-weight: 700; }
+
+.gram-rule { border-left: 3px solid #16a34a; background: white; border-radius: 0 6px 6px 0; padding: 3px 7px; margin-bottom: 3px; font-size: 10px; }
+.gram-rule strong { color: #15803d; }
+
+.mini-table { margin-bottom: 3px; }
+.mini-table th { background: #16a34a; color: white; font-size: 9px; font-weight: 700; padding: 2px 4px; border: 0.5px solid #15803d; }
+.mini-table td { padding: 2px 4px; border: 0.5px solid #bbf7d0; font-size: 9.5px; text-align: center; background: white; }
+.mini-table td.g { background: #f0fdf4; font-weight: 700; text-align: left; }
+
+.satz-legende { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 5px; font-size: 9px; }
+.leg-item { display: flex; align-items: center; gap: 4px; }
+.leg-swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.sw-subjekt { background: #60a5fa; }
+.sw-modal { background: #f87171; }
+.sw-belag { background: #4ade80; }
+.sw-inf { background: #fbbf24; }
+
+.satzbau-box { display: flex; flex-direction: column; gap: 3px; }
+.satz-group-label { font-weight: 700; color: #78350f; font-size: 9.5px; margin-bottom: 2px; background: #fef3c7; display: inline-block; padding: 1px 7px; border-radius: 4px; border: 1px solid #fde68a; }
+.satz-pair { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 10px; }
+.satz-row .cell { padding: 2px 7px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.cell.subjekt { background: #bfdbfe; }
+.cell.modal { background: #fecaca; }
+.cell.belag { background: #bbf7d0; }
+.cell.inf { background: #fef08a; }
+
+.wort-group h4 { font-size: 9px; font-weight: 700; color: #9a3412; text-transform: uppercase; margin-bottom: 2px; }
+.wort-pills { display: flex; flex-wrap: wrap; gap: 3px; }
+.pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 1.5px 5px; font-size: 9px; }
+.monate-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; margin-top: 4px; }
+.monat-cell { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 2px 4px; text-align: center; font-size: 8.5px; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 3px 7px; margin-bottom: 3px; background: white; font-size: 10px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 4px 8px; font-size: 10px; background: white; color: #4c1d95; font-weight: 600; }
+
+.footer { margin-top: 6px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8.5px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 12 — Wochentage & Termine</h2>
+    </div>
+    <div class="badge">A1 · Lektion 12</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben</div>
+    <div class="section-body">
+      <table class="konj">
+        <thead><tr><th class="pronomen-col">Pronomen</th><th>müssen ⚠️ (unregelmäßig)</th></tr></thead>
+        <tbody>
+          <tr><td class="pronomen">ich</td><td class="irr-form">muss</td></tr>
+          <tr><td class="pronomen">du</td><td class="irr-form">musst</td></tr>
+          <tr><td class="pronomen">er/sie/es</td><td class="irr-form">muss</td></tr>
+          <tr><td class="pronomen">wir</td><td>müssen</td></tr>
+          <tr><td class="pronomen">ihr</td><td>müsst</td></tr>
+          <tr><td class="pronomen">sie/Sie</td><td>müssen</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik</div>
+    <div class="section-body">
+      <div class="gram-rule">Zeit-Präposition: <strong>am</strong> (Wochentag/Wochenende) — <strong>im</strong> (Monat)</div>
+      <table class="mini-table">
+        <thead><tr><th>Typ</th><th>Präp.</th><th>Beispiel</th></tr></thead>
+        <tbody>
+          <tr><td class="g">Wochentag</td><td>am</td><td>am Montag, am Wochenende</td></tr>
+          <tr><td class="g">Monat</td><td>im</td><td>im Mai, im Dezember</td></tr>
+          <tr><td class="g">wiederkehrend</td><td>-s</td><td>montags (nie „am montags"!)</td></tr>
+        </tbody>
+      </table>
+      <div class="gram-rule" style="margin-top:2px;">Mit Modalverb bleibt das trennbare Verb <strong>zusammen</strong> im Infinitiv am Satzende (anders als allein: L11!)</div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau — das Modalverb-Sandwich</div>
+    <div class="section-body">
+      <div class="satz-legende">
+        <div class="leg-item"><span class="leg-swatch sw-subjekt"></span>Subjekt</div>
+        <div class="leg-item"><span class="leg-swatch sw-modal"></span>Modalverb (Pos. 2)</div>
+        <div class="leg-item"><span class="leg-swatch sw-belag"></span>Belag (Zeit/Ort)</div>
+        <div class="leg-item"><span class="leg-swatch sw-inf"></span>Infinitiv (Satzende)</div>
+      </div>
+      <div class="satzbau-box">
+        <div>
+          <div class="satz-group-label">mit trennbarem Verb (bleibt zusammen!)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell modal">muss</div><div class="cell belag">montags früh</div><div class="cell inf">aufstehen.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Du</div><div class="cell modal">musst</div><div class="cell belag">am Samstag</div><div class="cell inf">einkaufen.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">mit normalem Verb</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Wir</div><div class="cell modal">müssen</div><div class="cell belag">am Freitag</div><div class="cell inf">arbeiten.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Sie</div><div class="cell modal">müssen</div><div class="cell belag">im Dezember</div><div class="cell inf">feiern.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter</div>
+    <div class="section-body">
+      <div class="wort-group">
+        <h4>Wochentage</h4>
+        <div class="wort-pills">
+          <span class="pill">Montag</span>
+          <span class="pill">Dienstag</span>
+          <span class="pill">Mittwoch</span>
+          <span class="pill">Donnerstag</span>
+          <span class="pill">Freitag</span>
+          <span class="pill">Samstag</span>
+          <span class="pill">Sonntag</span>
+          <span class="pill">Wochenende</span>
+        </div>
+      </div>
+      <div class="wort-group" style="margin-top:5px;">
+        <h4>Monate</h4>
+        <div class="monate-grid">
+          <div class="monat-cell">Januar</div>
+          <div class="monat-cell">Februar</div>
+          <div class="monat-cell">März</div>
+          <div class="monat-cell">April</div>
+          <div class="monat-cell">Mai</div>
+          <div class="monat-cell">Juni</div>
+          <div class="monat-cell">Juli</div>
+          <div class="monat-cell">August</div>
+          <div class="monat-cell">September</div>
+          <div class="monat-cell">Oktober</div>
+          <div class="monat-cell">November</div>
+          <div class="monat-cell">Dezember</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung</div>
+    <div class="section-body">
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich arbeite in Montag.</span><span class="richtig">✅ Ich arbeite am Montag.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich muss aufstehe um 6 Uhr.</span><span class="richtig">✅ Ich muss um 6 Uhr aufstehen.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich muss auf um 6 Uhr stehen.</span><span class="richtig">✅ Ich muss um 6 Uhr aufstehen.</span></div></div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele</div>
+    <div class="section-body">
+      <div class="beispiele-grid">
+        <div class="beispiel-box">Er muss einkaufen.</div>
+        <div class="beispiel-box">Ich habe am Montag Deutschkurs.</div>
+        <div class="beispiel-box">Mein Geburtstag ist im Mai.</div>
+        <div class="beispiel-box">Am Wochenende fahren wir weg.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 12 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

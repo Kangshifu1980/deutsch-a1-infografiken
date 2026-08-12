@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 19</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 10mm 13mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #1e293b; padding-bottom: 4px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 17px; font-weight: 700; color: #1e293b; }
+.doc-header h2 { font-size: 10.5px; font-weight: 500; color: #475569; margin-top: 1px; }
+.doc-header .badge { font-size: 9.5px; font-weight: 600; background: #e2e8f0; color: #1e293b; padding: 2px 9px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 3px 8px; border-radius: 4px 4px 0 0; margin-top: 6px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 6px 9px; margin-bottom: 2px; }
+
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+table { width: 100%; border-collapse: collapse; }
+table.konj th { background: #374151; color: white; font-size: 9.5px; font-weight: 700; padding: 2px 4px; text-align: center; border: 0.5px solid #4b5563; }
+table.konj th.pronomen-col { background: #1e3a8a; text-align: left; width: 90px; }
+table.konj td { padding: 2px 4px; border: 0.5px solid #e2e8f0; font-size: 10px; text-align: center; background: white; }
+table.konj td.pronomen { background: #f1f5f9; font-weight: 700; color: #1e3a8a; text-align: left; font-size: 9.5px; }
+table.konj tr:nth-child(even) td:not(.pronomen) { background: #f8fafc; }
+table.konj td.ge { color: #b45309; font-weight: 700; }
+
+.formel-chain { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+.fc-box { padding: 5px 12px; border-radius: 7px; font-weight: 800; font-size: 13px; }
+.fc-box.ge { background: #fef08a; color: #854d0e; }
+.fc-box.stamm { background: #bfdbfe; color: #1e3a8a; }
+.fc-box.t { background: #fef08a; color: #854d0e; }
+.fc-box.result { background: #1e3a8a; color: white; }
+.fc-plus { color: #94a3b8; font-weight: 700; font-size: 14px; }
+.fc-eq { color: #94a3b8; font-weight: 700; font-size: 14px; }
+
+.partizip-gruppe { margin-bottom: 5px; }
+.partizip-gruppe:last-child { margin-bottom: 0; }
+.pg-titel { font-size: 9px; font-weight: 700; color: #1e3a8a; text-transform: uppercase; margin-bottom: 3px; }
+.partizip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.partizip-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+.partizip-chip { background: white; border: 1px solid #93c5fd; border-radius: 6px; padding: 3px 6px; font-size: 9.5px; text-align: center; }
+.partizip-chip .inf { color: #64748b; }
+.partizip-chip .arrow { color: #2563eb; margin: 0 2px; }
+.partizip-chip .part { color: #1e3a8a; font-weight: 700; }
+.partizip-chip .ge-part { color: #92400e; font-weight: 800; }
+.partizip-chip .stamm-part { color: #1e3a8a; font-weight: 800; }
+.partizip-chip.exception { border-color: #f59e0b; background: #fffbeb; grid-column: span 3; }
+.partizip-chip.exception .part { color: #92400e; }
+
+.ausnahme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 5px; }
+.ausnahme-card { border: 1.5px solid #86efac; border-radius: 8px; padding: 6px 7px; background: white; text-align: center; }
+.ausnahme-card .icon { font-size: 18px; }
+.ausnahme-card .titel { font-weight: 700; color: #15803d; font-size: 9.5px; margin: 2px 0; }
+.ausnahme-card .beispiel { font-size: 9.5px; color: #1a1a1a; font-weight: 600; }
+.extra-e { color: white; background: #dc2626; font-weight: 800; padding: 0 3px; border-radius: 3px; }
+
+.sandwich-diagram { display: flex; align-items: center; justify-content: center; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+.sw-box { padding: 4px 9px; border-radius: 6px; font-size: 9.5px; font-weight: 700; text-align: center; }
+.sw-box.subj { background: #bfdbfe; color: #1e3a8a; }
+.sw-box.hab { background: #fecaca; color: #7c2d12; }
+.sw-box.mid { background: #f1f5f9; color: #64748b; font-weight: 400; font-style: italic; }
+.sw-box.part { background: #fef08a; color: #854d0e; }
+
+.gram-rule { border-left: 3px solid #16a34a; background: white; border-radius: 0 6px 6px 0; padding: 3px 7px; margin-bottom: 3px; font-size: 10px; }
+.gram-rule strong { color: #15803d; }
+
+.mini-table { margin-bottom: 3px; }
+.mini-table th { background: #16a34a; color: white; font-size: 9px; font-weight: 700; padding: 2px 4px; border: 0.5px solid #15803d; }
+.mini-table td { padding: 2px 4px; border: 0.5px solid #bbf7d0; font-size: 9.5px; text-align: center; background: white; }
+.mini-table td.g { background: #f0fdf4; font-weight: 700; text-align: left; }
+
+.satz-legende { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 5px; font-size: 9px; }
+.leg-item { display: flex; align-items: center; gap: 4px; }
+.leg-swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.sw-subjekt { background: #60a5fa; }
+.sw-verb { background: #f87171; }
+.sw-erg { background: #4ade80; }
+.sw-part { background: #fbbf24; }
+
+.satzbau-box { display: flex; flex-direction: column; gap: 3px; }
+.satz-group-label { font-weight: 700; color: #78350f; font-size: 9.5px; margin-bottom: 2px; background: #fef3c7; display: inline-block; padding: 1px 7px; border-radius: 4px; border: 1px solid #fde68a; }
+.satz-pair { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 10px; }
+.satz-row .cell { padding: 2px 7px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.cell.subjekt { background: #bfdbfe; }
+.cell.verb { background: #fecaca; }
+.cell.erg { background: #bbf7d0; }
+.cell.part { background: #fef08a; }
+
+.wort-group h4 { font-size: 9px; font-weight: 700; color: #9a3412; text-transform: uppercase; margin-bottom: 2px; }
+.wort-pills { display: flex; flex-wrap: wrap; gap: 3px; }
+.pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 1.5px 5px; font-size: 9px; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 3px 7px; margin-bottom: 3px; background: white; font-size: 10px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 4px 8px; font-size: 10px; background: white; color: #4c1d95; font-weight: 600; }
+
+.footer { margin-top: 6px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8.5px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 19 — Das Perfekt (Teil 1)</h2>
+    </div>
+    <div class="badge">A1 · Lektion 19</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben — Infinitiv → Partizip Perfekt</div>
+    <div class="section-body">
+      <div class="formel-chain">
+        <div class="fc-box ge">ge-</div>
+        <span class="fc-plus">+</span>
+        <div class="fc-box stamm">Stamm</div>
+        <span class="fc-plus">+</span>
+        <div class="fc-box t">-t</div>
+        <span class="fc-eq">=</span>
+        <div class="fc-box result">Partizip</div>
+      </div>
+      <div class="partizip-gruppe">
+        <div class="pg-titel">Standard (ge- + Stamm + -t)</div>
+        <div class="partizip-grid">
+          <div class="partizip-chip"><span class="inf">kochen</span><span class="arrow">→</span><span class="ge-part">ge</span><span class="stamm-part">koch</span><span class="ge-part">t</span></div>
+          <div class="partizip-chip"><span class="inf">lernen</span><span class="arrow">→</span><span class="ge-part">ge</span><span class="stamm-part">lern</span><span class="ge-part">t</span></div>
+          <div class="partizip-chip"><span class="inf">spielen</span><span class="arrow">→</span><span class="ge-part">ge</span><span class="stamm-part">spiel</span><span class="ge-part">t</span></div>
+          <div class="partizip-chip"><span class="inf">kaufen</span><span class="arrow">→</span><span class="ge-part">ge</span><span class="stamm-part">kauf</span><span class="ge-part">t</span></div>
+          <div class="partizip-chip"><span class="inf">putzen</span><span class="arrow">→</span><span class="ge-part">ge</span><span class="stamm-part">putz</span><span class="ge-part">t</span></div>
+          <div class="partizip-chip"><span class="inf">hören</span><span class="arrow">→</span><span class="ge-part">ge</span><span class="stamm-part">hör</span><span class="ge-part">t</span></div>
+          <div class="partizip-chip"><span class="inf">tanzen</span><span class="arrow">→</span><span class="ge-part">ge</span><span class="stamm-part">tanz</span><span class="ge-part">t</span></div>
+          <div class="partizip-chip"><span class="inf">lachen</span><span class="arrow">→</span><span class="ge-part">ge</span><span class="stamm-part">lach</span><span class="ge-part">t</span></div>
+        </div>
+      </div>
+      <div class="partizip-gruppe">
+        <div class="pg-titel">Stamm endet auf -t/-d (+e)</div>
+        <div class="partizip-grid two-col">
+          <div class="partizip-chip"><span class="inf">arbeiten</span><span class="arrow">→</span><span class="ge-part">ge</span><span class="stamm-part">arbeit</span><span class="extra-e">e</span><span class="ge-part">t</span></div>
+        </div>
+      </div>
+      <div class="partizip-gruppe">
+        <div class="pg-titel">-ieren (kein ge-!)</div>
+        <div class="partizip-grid two-col">
+          <div class="partizip-chip exception"><span class="inf">telefonieren</span><span class="arrow">→</span><span class="stamm-part">telefonier</span><span class="ge-part">t</span></div>
+          <div class="partizip-chip exception"><span class="inf">studieren</span><span class="arrow">→</span><span class="stamm-part">studier</span><span class="ge-part">t</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik</div>
+    <div class="section-body">
+      <div class="ausnahme-grid">
+        <div class="ausnahme-card">
+          <span class="icon">🚫</span>
+          <div class="titel">-ieren → kein ge-!</div>
+          <div class="beispiel">telefonieren → telefoniert</div>
+        </div>
+        <div class="ausnahme-card">
+          <div class="titel">Stamm endet auf -t/-d</div>
+          <div class="beispiel">ge · arbeit · <span class="extra-e">e</span> · t</div>
+          <div style="font-size:8.5px; color:#64748b; margin-top:2px;">sonst: „arbeitt" — unaussprechbar</div>
+        </div>
+      </div>
+      <div class="gram-rule">Perfekt-Sandwich (wie Modalverb, L12):</div>
+      <div class="sandwich-diagram">
+        <div class="sw-box subj">Ich</div>
+        <div class="sw-box hab">habe (Pos. 2)</div>
+        <div class="sw-box mid">gestern ...</div>
+        <div class="sw-box part">gekocht (Ende)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau</div>
+    <div class="section-body">
+      <div class="satz-legende">
+        <div class="leg-item"><span class="leg-swatch sw-subjekt"></span>Subjekt</div>
+        <div class="leg-item"><span class="leg-swatch sw-verb"></span>haben</div>
+        <div class="leg-item"><span class="leg-swatch sw-erg"></span>Ergänzung</div>
+        <div class="leg-item"><span class="leg-swatch sw-part"></span>Partizip (Ende)</div>
+      </div>
+      <div class="satzbau-box">
+        <div>
+          <div class="satz-group-label">Standard (ge-...-t)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">habe</div><div class="cell erg">gestern</div><div class="cell part">gekocht.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Wir</div><div class="cell verb">haben</div><div class="cell erg">Musik</div><div class="cell part">gehört.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">-ieren (kein ge-)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Du</div><div class="cell verb">hast</div><div class="cell erg">lange</div><div class="cell part">telefoniert.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Sie</div><div class="cell verb">hat</div><div class="cell erg">viel</div><div class="cell part">studiert.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">Stamm auf -t (+e)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Er</div><div class="cell verb">hat</div><div class="cell erg">den ganzen Tag</div><div class="cell part">gearbeitet.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Wir</div><div class="cell verb">haben</div><div class="cell erg">letzte Woche</div><div class="cell part">gearbeitet.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">Frage</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell verb">Hast</div><div class="cell subjekt">du</div><div class="cell erg">gestern</div><div class="cell part">gekocht?</div></div>
+            <div class="satz-row"><div class="cell verb">Habt</div><div class="cell subjekt">ihr</div><div class="cell erg">Musik</div><div class="cell part">gehört?</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter — Zeitangaben (Vergangenheit)</div>
+    <div class="section-body">
+      <div class="wort-group">
+        <h4>Tage</h4>
+        <div class="wort-pills">
+          <span class="pill">gestern</span>
+          <span class="pill">gestern Abend</span>
+          <span class="pill">vorgestern</span>
+          <span class="pill">am Montag</span>
+        </div>
+      </div>
+      <div class="wort-group" style="margin-top:5px;">
+        <h4>Zeiträume</h4>
+        <div class="wort-pills">
+          <span class="pill">letzte Woche</span>
+          <span class="pill">letztes Wochenende</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung</div>
+    <div class="section-body">
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich habe gekocht gestern.</span><span class="richtig">✅ Ich habe gestern gekocht.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich habe getelefoniert.</span><span class="richtig">✅ Ich habe telefoniert.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Wir haben gearbeitt.</span><span class="richtig">✅ Wir haben gearbeitet.</span></div></div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele</div>
+    <div class="section-body">
+      <div class="beispiele-grid">
+        <div class="beispiel-box">Er hat gestern Fußball gespielt.</div>
+        <div class="beispiel-box">Sie hat eine Pizza gekauft.</div>
+        <div class="beispiel-box">Wir haben letzte Woche viel gelacht.</div>
+        <div class="beispiel-box">Habt ihr am Montag gearbeitet?</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 19 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

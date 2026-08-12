@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch A1 — Infografik — Lektion 14</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.3; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 10mm 13mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #1e293b; padding-bottom: 4px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 17px; font-weight: 700; color: #1e293b; }
+.doc-header h2 { font-size: 10.5px; font-weight: 500; color: #475569; margin-top: 1px; }
+.doc-header .badge { font-size: 9.5px; font-weight: 600; background: #e2e8f0; color: #1e293b; padding: 2px 9px; border-radius: 20px; white-space: nowrap; }
+
+.section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: white; padding: 3px 8px; border-radius: 4px 4px 0 0; margin-top: 6px; }
+.section-body { border: 1px solid; border-top: none; border-radius: 0 0 6px 6px; padding: 6px 9px; margin-bottom: 2px; }
+
+.c-verben .section-title { background: #2563eb; }
+.c-verben .section-body { border-color: #93c5fd; background: #eff6ff; }
+.c-grammatik .section-title { background: #16a34a; }
+.c-grammatik .section-body { border-color: #86efac; background: #f0fdf4; }
+.c-satzbau .section-title { background: #ca8a04; }
+.c-satzbau .section-body { border-color: #fde68a; background: #fffbeb; }
+.c-woerter .section-title { background: #ea580c; }
+.c-woerter .section-body { border-color: #fed7aa; background: #fff7ed; }
+.c-achtung .section-title { background: #dc2626; }
+.c-achtung .section-body { border-color: #fecaca; background: #fef2f2; }
+.c-beispiele .section-title { background: #7c3aed; }
+.c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
+
+table { width: 100%; border-collapse: collapse; }
+table.konj th { background: #374151; color: white; font-size: 9.5px; font-weight: 700; padding: 2px 4px; text-align: center; border: 0.5px solid #4b5563; }
+table.konj th.pronomen-col { background: #1e3a8a; text-align: left; width: 55px; }
+table.konj td { padding: 2px 4px; border: 0.5px solid #e2e8f0; font-size: 10px; text-align: center; background: white; }
+table.konj td.pronomen { background: #f1f5f9; font-weight: 700; color: #1e3a8a; text-align: left; font-size: 9.5px; }
+table.konj tr:nth-child(even) td:not(.pronomen) { background: #f8fafc; }
+table.konj td.irr-form { color: #dc2626; font-weight: 700; }
+
+.verben-grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+.verben-grid3 h4 { font-size: 9.5px; font-weight: 700; color: #1e3a8a; margin-bottom: 2px; text-align: center; }
+
+.gram-rule { border-left: 3px solid #16a34a; background: white; border-radius: 0 6px 6px 0; padding: 3px 7px; margin-bottom: 3px; font-size: 10px; }
+.gram-rule strong { color: #15803d; }
+
+.mini-table { margin-bottom: 3px; }
+.mini-table th { background: #16a34a; color: white; font-size: 9px; font-weight: 700; padding: 2px 4px; border: 0.5px solid #15803d; }
+.mini-table td { padding: 2px 4px; border: 0.5px solid #bbf7d0; font-size: 9.5px; text-align: center; background: white; }
+.mini-table td.g { background: #f0fdf4; font-weight: 700; text-align: left; }
+
+.satz-legende { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 5px; font-size: 9px; }
+.leg-item { display: flex; align-items: center; gap: 4px; }
+.leg-swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.sw-subjekt { background: #60a5fa; }
+.sw-verb { background: #f87171; }
+.sw-erg { background: #4ade80; }
+.sw-inf { background: #fbbf24; }
+
+.satzbau-box { display: flex; flex-direction: column; gap: 3px; }
+.satz-group-label { font-weight: 700; color: #78350f; font-size: 9.5px; margin-bottom: 2px; background: #fef3c7; display: inline-block; padding: 1px 7px; border-radius: 4px; border: 1px solid #fde68a; }
+.satz-pair { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 10px; }
+.satz-row .cell { padding: 2px 7px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.cell.subjekt { background: #bfdbfe; }
+.cell.verb { background: #fecaca; }
+.cell.erg { background: #bbf7d0; }
+.cell.inf { background: #fef08a; }
+
+.wort-group h4 { font-size: 9px; font-weight: 700; color: #9a3412; text-transform: uppercase; margin-bottom: 2px; }
+.wort-pills { display: flex; flex-wrap: wrap; gap: 3px; }
+.pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 1.5px 5px; font-size: 9px; }
+
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 3px 7px; margin-bottom: 3px; background: white; font-size: 10px; }
+.achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.achtung-item .falsch { color: #b91c1c; }
+.achtung-item .richtig { color: #15803d; }
+
+.beispiele-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 4px 8px; font-size: 10px; background: white; color: #4c1d95; font-weight: 600; }
+
+.footer { margin-top: 6px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8.5px; color: #94a3b8; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div>
+      <h1>🇩🇪 Deutsch A1 — Infografik</h1>
+      <h2>Lektion 14 — Regeln & Wünsche</h2>
+    </div>
+    <div class="badge">A1 · Lektion 14</div>
+  </div>
+
+  <div class="c-verben">
+    <div class="section-title">🟦 Verben (Modalverben)</div>
+    <div class="section-body">
+      <div class="verben-grid3">
+        <div>
+          <h4>wollen ⚠️</h4>
+          <table class="konj">
+            <thead><tr><th class="pronomen-col">Pron.</th><th>Form</th></tr></thead>
+            <tbody>
+              <tr><td class="pronomen">ich</td><td class="irr-form">will</td></tr>
+              <tr><td class="pronomen">du</td><td class="irr-form">willst</td></tr>
+              <tr><td class="pronomen">er/sie/es</td><td class="irr-form">will</td></tr>
+              <tr><td class="pronomen">wir</td><td>wollen</td></tr>
+              <tr><td class="pronomen">ihr</td><td>wollt</td></tr>
+              <tr><td class="pronomen">sie/Sie</td><td>wollen</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h4>dürfen ⚠️</h4>
+          <table class="konj">
+            <thead><tr><th class="pronomen-col">Pron.</th><th>Form</th></tr></thead>
+            <tbody>
+              <tr><td class="pronomen">ich</td><td class="irr-form">darf</td></tr>
+              <tr><td class="pronomen">du</td><td class="irr-form">darfst</td></tr>
+              <tr><td class="pronomen">er/sie/es</td><td class="irr-form">darf</td></tr>
+              <tr><td class="pronomen">wir</td><td>dürfen</td></tr>
+              <tr><td class="pronomen">ihr</td><td>dürft</td></tr>
+              <tr><td class="pronomen">sie/Sie</td><td>dürfen</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h4>sollen ⚠️</h4>
+          <table class="konj">
+            <thead><tr><th class="pronomen-col">Pron.</th><th>Form</th></tr></thead>
+            <tbody>
+              <tr><td class="pronomen">ich</td><td class="irr-form">soll</td></tr>
+              <tr><td class="pronomen">du</td><td class="irr-form">sollst</td></tr>
+              <tr><td class="pronomen">er/sie/es</td><td class="irr-form">soll</td></tr>
+              <tr><td class="pronomen">wir</td><td>sollen</td></tr>
+              <tr><td class="pronomen">ihr</td><td>sollt</td></tr>
+              <tr><td class="pronomen">sie/Sie</td><td>sollen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grammatik">
+    <div class="section-title">🟩 Grammatik</div>
+    <div class="section-body">
+      <div class="gram-rule"><strong>wollen</strong> = starker Wille / feste Absicht (Ich will nach Berlin reisen.)</div>
+      <div class="gram-rule"><strong>dürfen</strong> = Erlaubnis — <strong>nicht dürfen</strong> = VERBOT</div>
+      <table class="mini-table">
+        <thead><tr><th>Form</th><th>Bedeutung</th><th>Beispiel</th></tr></thead>
+        <tbody>
+          <tr><td class="g">nicht dürfen</td><td>Verbot</td><td>Du darfst hier nicht rauchen.</td></tr>
+          <tr><td class="g">nicht müssen</td><td>keine Pflicht (aber erlaubt)</td><td>Du musst nicht rauchen, aber du darfst.</td></tr>
+        </tbody>
+      </table>
+      <div class="gram-rule" style="margin-top:2px;"><strong>sollen</strong> = Empfehlung / Wille einer anderen Person (z.B. Arzt, Chef) — <strong>müssen</strong> = eigene, objektive Notwendigkeit</div>
+    </div>
+  </div>
+
+  <div class="c-satzbau">
+    <div class="section-title">🟨 Satzbau</div>
+    <div class="section-body">
+      <div class="satz-legende">
+        <div class="leg-item"><span class="leg-swatch sw-subjekt"></span>Subjekt</div>
+        <div class="leg-item"><span class="leg-swatch sw-verb"></span>Verb</div>
+        <div class="leg-item"><span class="leg-swatch sw-erg"></span>Ergänzung</div>
+        <div class="leg-item"><span class="leg-swatch sw-inf"></span>Infinitiv (Ende)</div>
+      </div>
+      <div class="satzbau-box">
+        <div>
+          <div class="satz-group-label">wollen (Absicht)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">will</div><div class="cell erg">nach Berlin</div><div class="cell inf">reisen.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Sie</div><div class="cell verb">will</div><div class="cell erg">Ärztin</div><div class="cell inf">werden.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">dürfen (Erlaubnis)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Wir</div><div class="cell verb">dürfen</div><div class="cell erg">hier Fußball</div><div class="cell inf">spielen.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Du</div><div class="cell verb">darfst</div><div class="cell erg">länger</div><div class="cell inf">aufbleiben.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">dürfen + nicht (Verbot)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Er</div><div class="cell verb">darf</div><div class="cell erg">hier nicht</div><div class="cell inf">rauchen.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Du</div><div class="cell verb">darfst</div><div class="cell erg">hier nicht</div><div class="cell inf">parken.</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="satz-group-label">sollen (Empfehlung)</div>
+          <div class="satz-pair">
+            <div class="satz-row"><div class="cell subjekt">Du</div><div class="cell verb">sollst</div><div class="cell erg">mehr Wasser</div><div class="cell inf">trinken.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">soll</div><div class="cell erg">heute Abend</div><div class="cell inf">anrufen.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-woerter">
+    <div class="section-title">🟧 Wichtige Wörter</div>
+    <div class="section-body">
+      <div class="wort-group">
+        <h4>Regeln & Verbote</h4>
+        <div class="wort-pills">
+          <span class="pill">das Rauchverbot</span>
+          <span class="pill">die Ruhezeit</span>
+          <span class="pill">die Mülltrennung</span>
+          <span class="pill">das Handyverbot</span>
+          <span class="pill">die Hausordnung</span>
+          <span class="pill">die Erlaubnis</span>
+          <span class="pill">das Verbot</span>
+          <span class="pill">die Regel</span>
+        </div>
+      </div>
+      <div class="wort-group" style="margin-top:5px;">
+        <h4>Wünsche & Pläne</h4>
+        <div class="wort-pills">
+          <span class="pill">der Wunsch</span>
+          <span class="pill">der Plan</span>
+          <span class="pill">vorhaben</span>
+          <span class="pill">das Ziel</span>
+          <span class="pill">träumen von</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-achtung">
+    <div class="section-title">🟥 Achtung</div>
+    <div class="section-body">
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Du dürfst hier parken.</span><span class="richtig">✅ Du darfst hier parken.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich muss hier nicht rauchen. (Verbot?)</span><span class="richtig">✅ Ich darf hier nicht rauchen.</span></div></div>
+      <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich wolle ins Kino gehen.</span><span class="richtig">✅ Ich will ins Kino gehen.</span></div></div>
+    </div>
+  </div>
+
+  <div class="c-beispiele">
+    <div class="section-title">🟪 Beispiele</div>
+    <div class="section-body">
+      <div class="beispiele-grid">
+        <div class="beispiel-box">Willst du mitkommen?</div>
+        <div class="beispiel-box">Darfst du am Wochenende ausgehen?</div>
+        <div class="beispiel-box">Er soll pünktlich sein.</div>
+        <div class="beispiel-box">Wir sollen die Hausaufgaben machen.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Deutsch A1 · Lektion 14 · Infografik</span>
+    <span>Seite 1 / 1</span>
+  </div>
+</div>
+
+</body>
+</html>

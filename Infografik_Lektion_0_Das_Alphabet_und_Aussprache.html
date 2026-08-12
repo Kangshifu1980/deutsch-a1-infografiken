@@ -1,0 +1,332 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans)}
+.page{background:#1a2332;color:#fff;padding:20px;border-radius:12px;max-width:780px;margin:0 auto}
+.header{text-align:center;padding:12px 0 8px}
+.header .de{font-size:11px;letter-spacing:3px;color:#8899aa;margin-bottom:4px}
+.header h1{font-size:22px;font-weight:700;letter-spacing:2px;color:#fff;margin-bottom:2px}
+.header .sub{font-size:12px;color:#8899aa}
+.badge{display:inline-block;background:#e74c3c;color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:20px;letter-spacing:1px;margin:10px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px}
+.section{background:#fff;color:#1a2332;border-radius:10px;padding:14px}
+.sec-title{font-size:12px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block;flex-shrink:0}
+.dot-blue{background:#3498db}
+.dot-purple{background:#9b59b6}
+.dot-green{background:#27ae60}
+.dot-red{background:#e74c3c}
+.dot-orange{background:#e67e22}
+.scard{border-radius:8px;overflow:hidden;margin-bottom:8px}
+.scard-top{display:flex}
+.scard-letter{min-width:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 6px;gap:1px}
+.sc-blue{background:#1e40af}
+.sc-purple{background:#7c3aed}
+.sc-red{background:#A32D2D}
+.sc-orange{background:#d97706}
+.sc-green{background:#166534}
+.scard-ltr{font-size:22px;font-weight:700;color:#fff;line-height:1}
+.scard-ipa{font-size:10px;color:rgba(255,255,255,0.75);margin-top:2px}
+.scard-body{flex:1;padding:7px 10px;background:#f8fafc}
+.scard-de{font-size:11px;color:#1e40af;font-weight:600;margin-bottom:3px;line-height:1.4}
+.scard-vi{font-size:10.5px;color:#166534;line-height:1.4;margin-bottom:3px}
+.scard-note{font-size:10px;padding:2px 6px;border-radius:4px;line-height:1.4;display:inline-block;margin-top:2px}
+.note-ok{background:#f0fdf4;color:#166534}
+.note-warn{background:#fff9f9;color:#A32D2D}
+.note-info{background:#fffbeb;color:#92400e}
+.scard-words{background:#f1f5f9;padding:5px 10px;display:flex;gap:5px;flex-wrap:wrap}
+.sword{display:inline-flex;flex-direction:column;background:#fff;border:0.5px solid #e2e8f0;border-radius:5px;padding:2px 6px}
+.sword-de{font-size:11px;font-weight:600;color:#111}
+.sword-vi{font-size:9px;color:#888}
+.pcard{border-radius:8px;overflow:hidden;margin-bottom:8px}
+.pcard-top{display:grid;grid-template-columns:1fr 1fr}
+.pcard-half{padding:8px 10px;background:#f8fafc}
+.pcard-half:first-child{border-right:1px solid #e2e8f0}
+.pl-green{color:#166534;font-size:18px;font-weight:700;margin-bottom:3px}
+.pl-red{color:#A32D2D;font-size:18px;font-weight:700;margin-bottom:3px}
+.pcard-de{font-size:11px;color:#333;line-height:1.4;margin-bottom:3px}
+.pcard-vi{font-size:10.5px;color:#166534;line-height:1.4}
+.pcard-note{font-size:10px;padding:2px 6px;border-radius:4px;margin-top:4px;display:inline-block}
+.pcard-words{background:#f1f5f9;padding:5px 10px;display:flex;gap:5px;flex-wrap:wrap}
+.rule-box{background:#eff6ff;color:#1e3a8a;font-size:10.5px;padding:5px 9px;border-radius:5px;margin-bottom:8px;line-height:1.5}
+.alpha-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:4px;margin-bottom:8px}
+.alpha-cell{background:#1e3a8a;color:#fff;border-radius:5px;text-align:center;padding:5px 3px}
+.alpha-cell.umlaut{background:#7c3aed}
+.alpha-cell.special{background:#d97706}
+.alpha-cell .ltr{font-size:13px;font-weight:700;line-height:1}
+.alpha-cell .name{font-size:9px;color:rgba(255,255,255,0.7);margin-top:1px}
+.footer{text-align:center;margin-top:14px;font-size:10px;color:#8899aa;padding-top:10px;border-top:1px solid #2d3d4f}
+</style>
+
+<div class="page">
+  <div class="header">
+    <div class="de">DE</div>
+    <h1>DEUTSCH A1 — LEKTION 0</h1>
+    <div class="sub">Das Alphabet &amp; Aussprache — Bảng chữ cái &amp; Phát âm</div>
+    <div><span class="badge">SCHNELLÜBERSICHT / TÓM TẮT NHANH</span></div>
+  </div>
+
+  <!-- ALPHABET -->
+  <div style="margin-top:12px">
+    <div class="section">
+      <div class="sec-title"><span class="dot dot-blue"></span> Das Alphabet / Bảng chữ cái — 26 + 3 Umlaute + ß</div>
+      <div class="alpha-grid">
+        <div class="alpha-cell"><div class="ltr">A a</div><div class="name">[aː]</div></div>
+        <div class="alpha-cell"><div class="ltr">B b</div><div class="name">[beː]</div></div>
+        <div class="alpha-cell"><div class="ltr">C c</div><div class="name">[tseː]</div></div>
+        <div class="alpha-cell"><div class="ltr">D d</div><div class="name">[deː]</div></div>
+        <div class="alpha-cell"><div class="ltr">E e</div><div class="name">[eː]</div></div>
+        <div class="alpha-cell"><div class="ltr">F f</div><div class="name">[ɛf]</div></div>
+        <div class="alpha-cell"><div class="ltr">G g</div><div class="name">[geː]</div></div>
+        <div class="alpha-cell"><div class="ltr">H h</div><div class="name">[haː]</div></div>
+        <div class="alpha-cell"><div class="ltr">I i</div><div class="name">[iː]</div></div>
+        <div class="alpha-cell"><div class="ltr">J j</div><div class="name">[jɔt]</div></div>
+        <div class="alpha-cell"><div class="ltr">K k</div><div class="name">[kaː]</div></div>
+        <div class="alpha-cell"><div class="ltr">L l</div><div class="name">[ɛl]</div></div>
+        <div class="alpha-cell"><div class="ltr">M m</div><div class="name">[ɛm]</div></div>
+        <div class="alpha-cell"><div class="ltr">N n</div><div class="name">[ɛn]</div></div>
+        <div class="alpha-cell"><div class="ltr">O o</div><div class="name">[oː]</div></div>
+        <div class="alpha-cell"><div class="ltr">P p</div><div class="name">[peː]</div></div>
+        <div class="alpha-cell"><div class="ltr">Q q</div><div class="name">[kuː]</div></div>
+        <div class="alpha-cell"><div class="ltr">R r</div><div class="name">[ɛʀ]</div></div>
+        <div class="alpha-cell"><div class="ltr">S s</div><div class="name">[ɛs]</div></div>
+        <div class="alpha-cell"><div class="ltr">T t</div><div class="name">[teː]</div></div>
+        <div class="alpha-cell"><div class="ltr">U u</div><div class="name">[uː]</div></div>
+        <div class="alpha-cell"><div class="ltr">V v</div><div class="name">[faʊ]</div></div>
+        <div class="alpha-cell"><div class="ltr">W w</div><div class="name">[veː]</div></div>
+        <div class="alpha-cell"><div class="ltr">X x</div><div class="name">[ɪks]</div></div>
+        <div class="alpha-cell"><div class="ltr">Y y</div><div class="name">[ʏpsilɔn]</div></div>
+        <div class="alpha-cell"><div class="ltr">Z z</div><div class="name">[tsɛt]</div></div>
+        <div class="alpha-cell umlaut"><div class="ltr">Ä ä</div><div class="name">[ɛː]</div></div>
+        <div class="alpha-cell umlaut"><div class="ltr">Ö ö</div><div class="name">[øː]</div></div>
+        <div class="alpha-cell umlaut"><div class="ltr">Ü ü</div><div class="name">[yː]</div></div>
+        <div class="alpha-cell special" style="grid-column:span 2"><div class="ltr">ß</div><div class="name">Eszett [ɛstsɛt] = ss</div></div>
+      </div>
+      <div style="display:flex;gap:8px;font-size:10px">
+        <span style="display:inline-flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1e3a8a;border-radius:3px;display:inline-block"></span> Normale Buchstaben</span>
+        <span style="display:inline-flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#7c3aed;border-radius:3px;display:inline-block"></span> Umlaute im Deutschen</span>
+        <span style="display:inline-flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#d97706;border-radius:3px;display:inline-block"></span> Sonderzeichen</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:12px">
+    <!-- VOKALE -->
+    <div class="section">
+      <div class="sec-title"><span class="dot dot-blue"></span> Vokale / Nguyên âm — A · E · I · O · U</div>
+      <div class="scard">
+        <div class="scard-top">
+          <div class="scard-letter sc-blue"><div class="scard-ltr">A a</div><div class="scard-ipa">[aː]</div></div>
+          <div class="scard-body">
+            <div class="scard-de">Mund weit öffnen, Zunge flach — tiefer Vokal.</div>
+            <div class="scard-vi">Như „a" trong <strong>ba, má</strong> — mở miệng rộng.</div>
+            <span class="scard-note note-ok">✓ Giống tiếng Việt – dễ!</span>
+          </div>
+        </div>
+        <div class="scard-words"><div class="sword"><span class="sword-de">der Arm</span><span class="sword-vi">cánh tay</span></div><div class="sword"><span class="sword-de">der Abend</span><span class="sword-vi">buổi tối</span></div></div>
+      </div>
+      <div class="scard">
+        <div class="scard-top">
+          <div class="scard-letter sc-blue"><div class="scard-ltr">E e</div><div class="scard-ipa">[eː]</div></div>
+          <div class="scard-body">
+            <div class="scard-de">Mundwinkel nach außen — wie beim Lächeln!</div>
+            <div class="scard-vi">Như „ê" trong <strong>bê, kê</strong> — kéo miệng sang hai bên.</div>
+            <span class="scard-note note-ok">✓ Gần giống „ê" tiếng Việt!</span>
+          </div>
+        </div>
+        <div class="scard-words"><div class="sword"><span class="sword-de">essen</span><span class="sword-vi">ăn</span></div><div class="sword"><span class="sword-de">der Esel</span><span class="sword-vi">con lừa</span></div></div>
+      </div>
+      <div class="scard">
+        <div class="scard-top">
+          <div class="scard-letter sc-blue"><div class="scard-ltr">I · O · U</div><div class="scard-ipa">[iː][oː][uː]</div></div>
+          <div class="scard-body">
+            <div class="scard-de"><strong>I</strong> — hoch, Mundwinkel stark nach außen.<br><strong>O</strong> — Lippen rund wie ein Kreis.<br><strong>U</strong> — Lippen extrem spitz (Pfeifmund).</div>
+            <div class="scard-vi">Tất cả giống tiếng Việt: <strong>i / ô / u</strong>.</div>
+            <span class="scard-note note-ok">✓ Cả ba đều dễ!</span>
+          </div>
+        </div>
+        <div class="scard-words"><div class="sword"><span class="sword-de">ich</span><span class="sword-vi">tôi</span></div><div class="sword"><span class="sword-de">das Obst</span><span class="sword-vi">trái cây</span></div><div class="sword"><span class="sword-de">die Uhr</span><span class="sword-vi">đồng hồ</span></div></div>
+      </div>
+    </div>
+
+    <!-- UMLAUTE + ß -->
+    <div class="section">
+      <div class="sec-title"><span class="dot dot-purple"></span> Umlaute &amp; ß — Biến âm &amp; Sonderzeichen</div>
+      <div class="scard">
+        <div class="scard-top">
+          <div class="scard-letter sc-purple"><div class="scard-ltr">Ä ä</div><div class="scard-ipa">[ɛː]</div></div>
+          <div class="scard-body">
+            <div class="scard-de">Mund offen wie A, aber E sprechen — zwischen A und E!</div>
+            <div class="scard-vi">Gần „e" trong <strong>mẹ, bé</strong> nhưng mở miệng rộng hơn.</div>
+            <span class="scard-note note-info">ℹ Luyện: a … e … ä!</span>
+          </div>
+        </div>
+        <div class="scard-words"><div class="sword"><span class="sword-de">spät</span><span class="sword-vi">muộn</span></div><div class="sword"><span class="sword-de">die Ärzte</span><span class="sword-vi">các bác sĩ</span></div></div>
+      </div>
+      <div class="scard">
+        <div class="scard-top">
+          <div class="scard-letter sc-purple"><div class="scard-ltr">Ö ö</div><div class="scard-ipa">[øː]</div></div>
+          <div class="scard-body">
+            <div class="scard-de">Lippen rund wie O + gleichzeitig E sprechen!</div>
+            <div class="scard-vi">Không có trong tiếng Việt! Môi tròn như „O" + lưỡi phát „E".</div>
+            <span class="scard-note note-warn">⚠ Âm khó! Luyện: O … E … Ö!</span>
+          </div>
+        </div>
+        <div class="scard-words"><div class="sword"><span class="sword-de">schön</span><span class="sword-vi">đẹp</span></div><div class="sword"><span class="sword-de">das Öl</span><span class="sword-vi">dầu</span></div></div>
+      </div>
+      <div class="scard">
+        <div class="scard-top">
+          <div class="scard-letter sc-purple"><div class="scard-ltr">Ü ü</div><div class="scard-ipa">[yː]</div></div>
+          <div class="scard-body">
+            <div class="scard-de">Langes I sprechen, dann Lippen rund nach vorne schieben!</div>
+            <div class="scard-vi">Không có trong tiếng Việt! Phát „I" dài + đẩy môi tròn ra như „U".</div>
+            <span class="scard-note note-warn">⚠ Âm khó nhất! Luyện: I … U … Ü!</span>
+          </div>
+        </div>
+        <div class="scard-words"><div class="sword"><span class="sword-de">müde</span><span class="sword-vi">mệt mỏi</span></div><div class="sword"><span class="sword-de">die Übung</span><span class="sword-vi">bài tập</span></div></div>
+      </div>
+      <div class="scard">
+        <div class="scard-top">
+          <div class="scard-letter sc-orange"><div class="scard-ltr">ß</div><div class="scard-ipa">[ɛstsɛt]</div></div>
+          <div class="scard-body">
+            <div class="scard-de">Wie ein scharfes „ss" aussprechen — nach langen Vokalen und Diphthongen!</div>
+            <div class="scard-vi">Phát âm như „ss" sắc, không rung dây thanh. ß thường đứng sau nguyên âm dài và nguyên âm đôi. <strong>heiß → „heiss"</strong></div>
+            <span class="scard-note note-info">ℹ ß = ss (Aussprache) · meist nach langem Vokal oder Diphthong · Großbuchstabe: ẞ</span>
+          </div>
+        </div>
+        <div class="scard-words"><div class="sword"><span class="sword-de">groß</span><span class="sword-vi">lớn</span></div><div class="sword"><span class="sword-de">heiß</span><span class="sword-vi">rất nóng</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KONSONANTEN — Seite 2 -->
+  <div style="page-break-before:always;margin-top:12px">
+    <div class="section">
+      <div class="sec-title"><span class="dot dot-green"></span> Wichtige Konsonanten &amp; Sonderlaute / Phụ âm quan trọng</div>
+      <div class="rule-box">
+        💡 <strong>Auslautverhärtung / Cứng hóa phụ âm cuối:</strong> Am Wort- oder Silbenende werden B, D und G stimmlos wie P, T und K gesprochen. Die Schreibweise bleibt gleich. &nbsp;|&nbsp; Ở cuối từ hoặc cuối âm tiết, B, D và G được phát âm vô thanh như P, T và K. Cách viết không thay đổi.
+        &nbsp;&nbsp;<strong>Bsp.:</strong> der Ta<strong>g</strong> → „Ta<strong>k</strong>" · un<strong>d</strong> → „un<strong>t</strong>" · der Aben<strong>d</strong> → „Aben<strong>t</strong>" · das Gra<strong>b</strong> → „Gra<strong>p</strong>"
+      </div>
+      <div class="grid3">
+        <div class="pcard">
+          <div class="pcard-top">
+            <div class="pcard-half">
+              <div class="pl-green">B b <span style="font-size:11px;font-weight:400;color:#888">[beː]</span></div>
+              <div class="pcard-de">Lippen sanft loslassen — kein Luftstoß!</div>
+              <div class="pcard-vi">Như „b" trong <strong>bố</strong> — âm mềm.</div>
+              <span class="pcard-note note-warn" style="font-size:10px;padding:2px 5px;border-radius:4px;background:#fff9f9;color:#A32D2D">⚠ 🇩🇪 Am Wortende: B → [p].<br>🇻🇳 Ở cuối từ: B → [p].</span>
+            </div>
+            <div class="pcard-half">
+              <div class="pl-red">P p <span style="font-size:11px;font-weight:400;color:#888">[peː]</span></div>
+              <div class="pcard-de">Starker Luftstoß — Hand vorhalten!</div>
+              <div class="pcard-vi">Mím môi, bật hơi thật mạnh!</div>
+              <span class="pcard-note note-warn" style="font-size:10px;padding:2px 5px;border-radius:4px;background:#fff9f9;color:#A32D2D">⚠ 🇩🇪 Am Wortanfang mit deutlichem Luftstoß.<br>🇻🇳 Ở đầu từ phát âm với luồng hơi rõ.</span>
+            </div>
+          </div>
+          <div class="pcard-words"><div class="sword"><span class="sword-de">bitte</span><span class="sword-vi">làm ơn</span></div><div class="sword"><span class="sword-de">der Pass</span><span class="sword-vi">hộ chiếu</span></div></div>
+        </div>
+        <div class="pcard">
+          <div class="pcard-top">
+            <div class="pcard-half">
+              <div class="pl-green">D d / G g</div>
+              <div class="pcard-de"><strong>D</strong>: Zunge an Zähne, weich. <strong>G</strong>: hinten im Rachen, weich.</div>
+              <div class="pcard-vi"><strong>D</strong>: như „đ". <strong>G</strong>: như „g" trong <strong>gà</strong>.</div>
+              <span class="pcard-note note-warn" style="font-size:10px;padding:2px 5px;border-radius:4px;background:#fff9f9;color:#A32D2D">⚠ 🇩🇪 Am Wortende: D→[t], G→[k].<br>🇻🇳 Ở cuối từ: D→[t], G→[k].</span>
+            </div>
+            <div class="pcard-half">
+              <div class="pl-red">T t / K k</div>
+              <div class="pcard-de"><strong>T</strong>: Zunge am Zahndamm; am Wortanfang meist mit Luftstoß. <strong>K</strong>: hinten im Mund; am Wortanfang meist mit Luftstoß.</div>
+              <div class="pcard-vi"><strong>T</strong>: đầu lưỡi chạm lợi trên. <strong>K</strong>: phát âm ở phía sau khoang miệng. Ở đầu từ thường có luồng hơi rõ.</div>
+              <span class="pcard-note note-warn" style="font-size:10px;padding:2px 5px;border-radius:4px;background:#fff9f9;color:#A32D2D">⚠ 🇩🇪 Am Wortanfang meist deutlich behaucht; am Wortende kann der Luftstoß schwächer sein.<br>🇻🇳 Ở đầu từ thường bật hơi rõ; ở cuối từ luồng hơi có thể nhẹ hơn.</span>
+            </div>
+          </div>
+          <div class="pcard-words"><div class="sword"><span class="sword-de">danke</span><span class="sword-vi">cảm ơn</span></div><div class="sword"><span class="sword-de">der Tag → „Tak"</span><span class="sword-vi">ngày</span></div></div>
+        </div>
+        <div class="pcard">
+          <div class="pcard-top">
+            <div class="pcard-half">
+              <div class="pl-red">V v: oft wie F</div>
+              <div class="pcard-de">In vielen deutschen Wörtern klingt V wie F. In vielen Fremdwörtern klingt V wie W. <strong>Vater → „Fater"</strong></div>
+              <div class="pcard-vi">Trong nhiều từ gốc Đức, V được phát âm như F/ph. Trong nhiều từ mượn, V được phát âm như W.</div>
+              <span class="pcard-note note-warn" style="font-size:10px;padding:2px 5px;border-radius:4px;background:#fff9f9;color:#A32D2D">⚠ V ≠ „v" tiếng Anh!</span>
+            </div>
+            <div class="pcard-half">
+              <div class="pl-green">W w [veː]</div>
+              <div class="pcard-de">Zähne auf Unterlippe + Stimme — kein rundes W wie Englisch!</div>
+              <div class="pcard-vi">Như „v" trong <strong>vào</strong> (Bắc) — răng + môi.</div>
+              <span class="pcard-note note-warn" style="font-size:10px;padding:2px 5px;border-radius:4px;background:#fff9f9;color:#A32D2D">⚠ W ≠ W tiếng Anh!</span>
+            </div>
+          </div>
+          <div class="pcard-words"><div class="sword"><span class="sword-de">der Vater → „Fater"</span><span class="sword-vi">người cha</span></div><div class="sword"><span class="sword-de">wann</span><span class="sword-vi">khi nào</span></div></div>
+        </div>
+      </div>
+
+      <!-- CH-LAUT — eigene, zweispaltige Zeile -->
+      <div class="rule-box" style="margin-top:4px">
+        ⚠ <strong>„ch" hat zwei Aussprachen / „ch" có hai cách đọc:</strong> weich nach i·e·ä·ö·ü·ei·eu &nbsp;·&nbsp; hart nach a·o·u·au
+      </div>
+      <div class="grid2">
+        <div class="scard" style="margin-bottom:0">
+          <div class="scard-top">
+            <div class="scard-letter sc-green"><div class="scard-ltr">ch</div><div class="scard-ipa">[ç] ich-Laut</div></div>
+            <div class="scard-body">
+              <div class="scard-de">Nach <strong>i·e·ä·ö·ü·ei·eu</strong>: weich, Zunge mittig oben, sanfter Luftstrom.</div>
+              <div class="scard-vi">Nhẹ, thổi hơi nhẹ giữa lưỡi — gần giống „hi" khe khẽ.</div>
+              <span class="scard-note note-warn">⚠ Nie wie „k" sprechen!</span>
+            </div>
+          </div>
+          <div class="scard-words"><div class="sword"><span class="sword-de">ich</span><span class="sword-vi">tôi</span></div><div class="sword"><span class="sword-de">nicht</span><span class="sword-vi">không</span></div><div class="sword"><span class="sword-de">richtig</span><span class="sword-vi">đúng</span></div></div>
+        </div>
+        <div class="scard" style="margin-bottom:0">
+          <div class="scard-top">
+            <div class="scard-letter sc-red"><div class="scard-ltr">ch</div><div class="scard-ipa">[x] ach-Laut</div></div>
+            <div class="scard-body">
+              <div class="scard-de">Nach <strong>a·o·u·au</strong>: hart, tief im Rachen gurgeln — rau!</div>
+              <div class="scard-vi">Nặng, cọ xát sâu trong họng — rất gần âm „kh" tiếng Việt.</div>
+              <span class="scard-note note-warn">⚠ Nicht wie „k", sondern gurgeln!</span>
+            </div>
+          </div>
+          <div class="scard-words"><div class="sword"><span class="sword-de">auch</span><span class="sword-vi">cũng</span></div><div class="sword"><span class="sword-de">der Bach</span><span class="sword-vi">con suối</span></div><div class="sword"><span class="sword-de">das Buch</span><span class="sword-vi">quyển sách</span></div></div>
+        </div>
+      </div>
+
+      <div class="grid3" style="margin-top:12px">
+        <div class="scard">
+          <div class="scard-top">
+            <div class="scard-letter sc-purple"><div class="scard-ltr">sch</div><div class="scard-ipa">[ʃ]</div></div>
+            <div class="scard-body">
+              <div class="scard-de">Kussmund! Lippen runden, Luft scharf ausströmen.</div>
+              <div class="scard-vi">Chu môi ra phía trước, thổi hơi mạnh. Khác hoàn toàn „S"!</div>
+              <span class="scard-note note-warn">⚠ SCH luôn chu môi!</span>
+            </div>
+          </div>
+          <div class="scard-words"><div class="sword"><span class="sword-de">schön</span><span class="sword-vi">đẹp</span></div><div class="sword"><span class="sword-de">schreiben</span><span class="sword-vi">viết</span></div></div>
+        </div>
+        <div class="scard">
+          <div class="scard-top">
+            <div class="scard-letter sc-green"><div class="scard-ltr">st · sp</div><div class="scard-ipa">[ʃt][ʃp]</div></div>
+            <div class="scard-body">
+              <div class="scard-de">Am Wortanfang und am Anfang einer betonten Silbe: „Scht-" / „Schp-"!</div>
+              <div class="scard-vi">Ở đầu từ và đầu âm tiết được nhấn: <strong>Straße → Schtraße · spielen → Schpielen</strong></div>
+              <span class="scard-note note-warn">⚠ Nicht „s-tờ" wie Englisch!</span>
+            </div>
+          </div>
+          <div class="scard-words"><div class="sword"><span class="sword-de">die Straße</span><span class="sword-vi">con đường</span></div><div class="sword"><span class="sword-de">spielen</span><span class="sword-vi">chơi</span></div></div>
+        </div>
+        <div class="scard">
+          <div class="scard-top">
+            <div class="scard-letter sc-red"><div class="scard-ltr">Z · R</div><div class="scard-ipa">[ts] · mehrere R-Laute</div></div>
+            <div class="scard-body">
+              <div class="scard-de"><strong>Z</strong> klingt in deutschen Wörtern wie „ts". &nbsp;<strong>R</strong> kann im Rachen oder mit der Zungenspitze gesprochen werden. Beide Varianten sind korrekt.</div>
+              <div class="scard-vi"><strong>Z</strong>: Luyện t…s…ts. &nbsp;<strong>R</strong>: Có thể phát âm trong họng hoặc rung bằng đầu lưỡi. Cả hai cách đều đúng.</div>
+              <span class="scard-note note-warn">⚠ Z ≠ „z" im Englischen · R nicht wie das englische R sprechen!</span>
+            </div>
+          </div>
+          <div class="scard-words"><div class="sword"><span class="sword-de">der Zug → „Tsug"</span><span class="sword-vi">tàu hỏa</span></div><div class="sword"><span class="sword-de">rot</span><span class="sword-vi">đỏ</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">DE Deutsch A1 — Lektion 0 &nbsp;|&nbsp; Viel Erfolg! / Chúc may mắn! VN</div>
+</div>
