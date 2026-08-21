@@ -61,9 +61,11 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
 .sw-erg { background: #4ade80; }
 
 .satzbau-box { display: flex; flex-direction: column; gap: 3px; }
-.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 10px; }
-.satz-row .cell { padding: 2px 7px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
-.satz-row .label { min-width: 100px; font-weight: 700; color: #78350f; background: #fef3c7; display:flex; align-items:center; padding: 2px 7px; border: 1px solid #fde68a; }
+.satz-row { display: grid; grid-template-columns: 105px 1fr 1fr; gap: 3px; font-size: 9.5px; }
+.satz-row .label { font-weight: 700; color: #78350f; background: #fef3c7; display:flex; align-items:center; padding: 3px 6px; border: 1px solid #fde68a; border-radius:3px; }
+.satz-example { display:flex; align-items:stretch; gap:0; }
+.satz-example .cell { padding: 3px 6px; color:#1a1a1a; font-weight:600; border:1px solid rgba(0,0,0,0.08); }
+.satz-example .cell:last-child { flex:1; }
 .cell.subjekt { background: #bfdbfe; }
 .cell.verb { background: #fecaca; }
 .cell.frage { background: #ddd6fe; }
@@ -83,6 +85,52 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
 .beispiel-box { border: 0.5px solid #ddd6fe; border-radius: 6px; padding: 4px 8px; font-size: 10px; background: white; color: #4c1d95; font-weight: 600; }
 
 .footer { margin-top: 6px; padding-top: 3px; border-top: 0.5px solid #e2e8f0; font-size: 8.5px; color: #94a3b8; display: flex; justify-content: space-between; }
+
+/* ===== Neue Artikelübersicht ===== */
+.article-overview { table-layout: fixed; margin: 1px 0 4px 0; }
+.article-overview th,
+.article-overview td {
+  border: 0.5px solid #d1d5db;
+  padding: 2px 4px;
+  font-size: 8.8px;
+  line-height: 1.12;
+  text-align: center;
+  vertical-align: middle;
+}
+.article-overview th { font-weight: 700; background:#f8fafc; }
+.article-overview .row-label {
+  text-align:left;
+  font-weight:700;
+  color:#475569;
+  background:#f8fafc;
+}
+.article-overview .col-m { background:#eff6ff; }
+.article-overview .col-f { background:#fdf2f8; }
+.article-overview .col-n { background:#f0fdf4; }
+.article-overview .col-p { background:#faf5ff; }
+.article-overview th.col-m, .article-overview td.col-m strong { color:#1e40af; }
+.article-overview th.col-f, .article-overview td.col-f strong { color:#9d174d; }
+.article-overview th.col-n, .article-overview td.col-n strong { color:#14532d; }
+.article-overview th.col-p, .article-overview td.col-p strong { color:#6b21a8; }
+.article-overview small {
+  display:block;
+  font-size:7.3px;
+  line-height:1.05;
+  margin-top:1px;
+  font-weight:500;
+  color:#64748b;
+}
+.article-note {
+  border-left: 3px solid #16a34a;
+  background: white;
+  border-radius: 0 6px 6px 0;
+  padding: 3px 7px;
+  margin-bottom: 3px;
+  font-size: 9.3px;
+  line-height: 1.2;
+}
+.article-note strong { color:#15803d; }
+
 </style>
 </head>
 <body>
@@ -120,9 +168,48 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
   <div class="c-grammatik">
     <div class="section-title">🟩 Grammatik</div>
     <div class="section-body">
-      <div class="gram-rule"><strong>Artikel:</strong> der/die/das (bestimmt) — ein/eine/ein (unbestimmt)</div>
-      <div class="gram-rule"><strong>Beruf nach „sein":</strong> ohne Artikel — nur mit Adjektiv: unbestimmter Artikel</div>
-      <div class="gram-rule"><strong>Negation von Nomen:</strong> kein/keine (nicht „nicht ein")</div>
+      <table class="article-overview">
+        <colgroup>
+          <col style="width:17%">
+          <col style="width:20.75%">
+          <col style="width:20.75%">
+          <col style="width:20.75%">
+          <col style="width:20.75%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th></th>
+            <th class="col-m">MASKULIN<small>giống đực</small></th>
+            <th class="col-f">FEMININ<small>giống cái</small></th>
+            <th class="col-n">NEUTRAL<small>giống trung</small></th>
+            <th class="col-p">PLURAL<small>số nhiều</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">bestimmt<small>xác định</small></td>
+            <td class="col-m"><strong>der</strong> Lehrer</td>
+            <td class="col-f"><strong>die</strong> Lehrerin</td>
+            <td class="col-n"><strong>das</strong> Buch</td>
+            <td class="col-p"><strong>die</strong> Bücher</td>
+          </tr>
+          <tr>
+            <td class="row-label">unbestimmt<small>không xác định</small></td>
+            <td class="col-m"><strong>ein</strong> Lehrer</td>
+            <td class="col-f"><strong>eine</strong> Lehrerin</td>
+            <td class="col-n"><strong>ein</strong> Buch</td>
+            <td class="col-p">— Bücher</td>
+          </tr>
+          <tr>
+            <td class="row-label">Negation<small>phủ định</small></td>
+            <td class="col-m"><strong>kein</strong> Lehrer</td>
+            <td class="col-f"><strong>keine</strong> Lehrerin</td>
+            <td class="col-n"><strong>kein</strong> Buch</td>
+            <td class="col-p"><strong>keine</strong> Bücher</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="article-note"><strong>Beruf nach „sein":</strong> ohne Artikel: „Ich bin Arzt." / „Sie ist Lehrerin." &nbsp;·&nbsp; <strong>Mit Adjektiv:</strong> ein/eine: „Er ist ein netter Lehrer." / „Sie ist eine nette Ärztin."</div>
     </div>
   </div>
 
@@ -138,19 +225,23 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
       <div class="satzbau-box">
         <div class="satz-row">
           <div class="label">Beruf (ohne Art.)</div>
-          <div class="cell subjekt">Ich</div><div class="cell verb">bin</div><div class="cell erg">Arzt.</div>
+          <div class="satz-example"><div class="cell subjekt">Ich</div><div class="cell verb">bin</div><div class="cell erg">Arzt.</div></div>
+          <div class="satz-example"><div class="cell subjekt">Sie</div><div class="cell verb">ist</div><div class="cell erg">Lehrerin.</div></div>
         </div>
         <div class="satz-row">
           <div class="label">Beruf + Adjektiv</div>
-          <div class="cell subjekt">Sie</div><div class="cell verb">ist</div><div class="cell erg">eine nette Ärztin.</div>
+          <div class="satz-example"><div class="cell subjekt">Sie</div><div class="cell verb">ist</div><div class="cell erg">eine nette Ärztin.</div></div>
+          <div class="satz-example"><div class="cell subjekt">Er</div><div class="cell verb">ist</div><div class="cell erg">ein freundlicher Lehrer.</div></div>
         </div>
         <div class="satz-row">
           <div class="label">Negation (Beruf)</div>
-          <div class="cell subjekt">Ich</div><div class="cell verb">bin</div><div class="cell erg">kein Arzt.</div>
+          <div class="satz-example"><div class="cell subjekt">Ich</div><div class="cell verb">bin</div><div class="cell erg">kein Arzt.</div></div>
+          <div class="satz-example"><div class="cell subjekt">Sie</div><div class="cell verb">ist</div><div class="cell erg">keine Lehrerin.</div></div>
         </div>
         <div class="satz-row">
           <div class="label">Negation (Ding)</div>
-          <div class="cell subjekt">Das</div><div class="cell verb">ist</div><div class="cell erg">kein Computer.</div>
+          <div class="satz-example"><div class="cell subjekt">Das</div><div class="cell verb">ist</div><div class="cell erg">kein Computer.</div></div>
+          <div class="satz-example"><div class="cell subjekt">Das</div><div class="cell verb">ist</div><div class="cell erg">kein Buch.</div></div>
         </div>
       </div>
     </div>
