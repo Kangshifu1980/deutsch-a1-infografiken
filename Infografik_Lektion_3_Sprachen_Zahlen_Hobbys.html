@@ -36,9 +36,9 @@ body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-heigh
 .c-beispiele .section-body { border-color: #ddd6fe; background: #faf5ff; }
 
 table { width: 100%; border-collapse: collapse; }
-table.konj th { background: #374151; color: white; font-size: 10px; font-weight: 700; padding: 3px 5px; text-align: center; border: 0.5px solid #4b5563; }
+table.konj th { background: #374151; color: white; font-size: 9.5px; font-weight: 700; padding: 2.5px 4px; text-align: center; border: 0.5px solid #4b5563; }
 table.konj th.pronomen-col { background: #1e3a8a; text-align: left; width: 70px; }
-table.konj td { padding: 2.5px 5px; border: 0.5px solid #e2e8f0; font-size: 10.5px; text-align: center; background: white; }
+table.konj td { padding: 2px 4px; border: 0.5px solid #e2e8f0; font-size: 9.8px; text-align: center; background: white; }
 table.konj td.pronomen { background: #f1f5f9; font-weight: 700; color: #1e3a8a; text-align: left; font-size: 10px; }
 table.konj tr:nth-child(even) td:not(.pronomen) { background: #f8fafc; }
 table.konj td.irregular { color: #b45309; font-weight: 700; }
@@ -106,18 +106,38 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
     <div class="section-title">🟦 Verben</div>
     <div class="section-body">
       <div class="verb-block">
-        <h4>sprechen <span class="tag irr">unregelmäßig — Vokalwechsel e → i</span></h4>
+        <h4>Verbmuster — wichtige Formen auf einen Blick</h4>
         <table class="konj">
-          <thead><tr><th class="pronomen-col">Pronomen</th><th>sprechen</th></tr></thead>
+          <colgroup>
+            <col style="width:17%">
+            <col style="width:29%">
+            <col style="width:27%">
+            <col style="width:27%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="pronomen-col">Pronomen</th>
+              <th>sprechen ⚠️<br><span style="font-size:8.5px;font-weight:500;">e → i</span></th>
+              <th>kochen<br><span style="font-size:8.5px;font-weight:500;">regelmäßig</span></th>
+              <th>tanzen ⚠️<br><span style="font-size:8.5px;font-weight:500;">Stamm auf -z</span></th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><td class="pronomen">ich</td><td>spreche</td></tr>
-            <tr><td class="pronomen">du</td><td class="irregular">sprichst</td></tr>
-            <tr><td class="pronomen">er/sie/es</td><td class="irregular">spricht</td></tr>
-            <tr><td class="pronomen">wir</td><td>sprechen</td></tr>
-            <tr><td class="pronomen">ihr</td><td>sprecht</td></tr>
-            <tr><td class="pronomen">sie/Sie</td><td>sprechen</td></tr>
+            <tr><td class="pronomen">ich</td><td>spreche</td><td>koch<strong>e</strong></td><td>tanze</td></tr>
+            <tr><td class="pronomen">du</td><td class="irregular"><strong>sprichst</strong></td><td>koch<strong>st</strong></td><td class="irregular"><strong>tanzt</strong></td></tr>
+            <tr><td class="pronomen">er/sie/es</td><td class="irregular"><strong>spricht</strong></td><td>koch<strong>t</strong></td><td>tanzt</td></tr>
+            <tr><td class="pronomen">wir</td><td>sprechen</td><td>koch<strong>en</strong></td><td>tanzen</td></tr>
+            <tr><td class="pronomen">ihr</td><td>sprecht</td><td>koch<strong>t</strong></td><td>tanzt</td></tr>
+            <tr><td class="pronomen">sie/Sie</td><td>sprechen</td><td>koch<strong>en</strong></td><td>tanzen</td></tr>
+            <tr>
+              <td class="pronomen">gleiches Muster</td>
+              <td><strong>lesen</strong><br><span style="font-size:8.5px;color:#64748b;">Vokalwechsel: e → ie</span></td>
+              <td><strong>spielen, hören</strong></td>
+              <td>—</td>
+            </tr>
           </tbody>
         </table>
+
       </div>
     </div>
   </div>
@@ -127,7 +147,7 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
     <div class="section-body">
       <div class="gram-rule"><strong>Alter:</strong> Subjekt + sein + Zahl (+ Jahre alt) — z.B. Ich bin 16 (Jahre alt).</div>
       <div class="gram-rule"><strong>gerne</strong> steht direkt nach dem konjugierten Verb</div>
-      <div class="gram-rule"><strong>Trennbares Verb</strong> fernsehen: Vorsilbe „fern" wandert ans Satzende</div>
+      <div class="gram-rule"><strong>Regelmäßige Verben:</strong> Verbstamm + Endung — z.B. koch<strong>e</strong>, koch<strong>st</strong>, koch<strong>t</strong></div>
     </div>
   </div>
 
@@ -154,8 +174,8 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
           <div class="cell subjekt">Ich</div><div class="cell verb">spiele</div><div class="cell erg">gerne Fußball.</div>
         </div>
         <div class="satz-row">
-          <div class="label">Trennbar</div>
-          <div class="cell subjekt">Ich</div><div class="cell verb">sehe</div><div class="cell erg">gerne fern.</div>
+          <div class="label">Hobby</div>
+          <div class="cell subjekt">Ich</div><div class="cell verb">höre</div><div class="cell erg">gerne Musik.</div>
         </div>
       </div>
     </div>
@@ -180,6 +200,10 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
           <div class="wort-pills">
             <span class="pill">Wie alt?</span>
             <span class="pill">gerne</span>
+            <span class="pill">kochen</span>
+            <span class="pill">lesen</span>
+            <span class="pill">tanzen</span>
+            <span class="pill">Musik hören</span>
           </div>
         </div>
       </div>
@@ -214,7 +238,8 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
     <div class="section-body">
       <div class="achtung-item row"><span class="falsch">❌ du sprechst</span><span class="richtig">✅ du sprichst</span></div>
       <div class="achtung-item row"><span class="falsch">❌ Ich habe 20 Jahre</span><span class="richtig">✅ Ich bin 20 Jahre alt</span></div>
-      <div class="achtung-item row"><span class="falsch">❌ Ich sehe fern gerne</span><span class="richtig">✅ Ich sehe gerne fern</span></div>
+      <div class="achtung-item row"><span class="falsch">❌ du lesst</span><span class="richtig">✅ du liest</span></div>
+      <div class="achtung-item row"><span class="falsch">❌ du tanzst</span><span class="richtig">✅ du tanzt</span></div>
     </div>
   </div>
 
@@ -225,7 +250,7 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
         <div class="beispiel-box">Ich spreche Vietnamesisch.</div>
         <div class="beispiel-box">Sprichst du Englisch?</div>
         <div class="beispiel-box">Ich bin 16 Jahre alt.</div>
-        <div class="beispiel-box">Ich sehe gerne fern.</div>
+        <div class="beispiel-box">Ich höre gerne Musik.</div>
       </div>
     </div>
   </div>
