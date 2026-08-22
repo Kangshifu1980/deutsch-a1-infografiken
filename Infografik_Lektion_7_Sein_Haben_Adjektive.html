@@ -60,11 +60,11 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
 .sw-frage { background: #a78bfa; }
 .sw-erg { background: #4ade80; }
 
-.satz-group { margin-bottom: 5px; }
+.satz-group { margin-bottom: 4px; }
 .satz-group-label { font-weight: 700; color: #78350f; font-size: 9.5px; margin-bottom: 2px; background: #fef3c7; display: inline-block; padding: 1px 7px; border-radius: 4px; border: 1px solid #fde68a; }
-.satz-pair { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 10px; }
-.satz-row .cell { padding: 2px 7px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); }
+.satz-pair { display: grid; grid-template-columns: repeat(3, 1fr); align-items: stretch; gap: 6px; }
+.satz-row { display: flex; align-items: stretch; gap: 0; font-size: 9.4px; min-width:0; }
+.satz-row .cell { padding: 2px 5px; color: #1a1a1a; font-weight: 600; border: 1px solid rgba(0,0,0,0.08); white-space:nowrap; }
 .cell.subjekt { background: #bfdbfe; }
 .cell.verb { background: #fecaca; }
 .cell.frage { background: #ddd6fe; }
@@ -75,7 +75,7 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
 .pill { background: white; border: 1px solid #fdba74; border-radius: 5px; padding: 1.5px 5px; font-size: 9px; }
 .wort-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 5px; }
 
-.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 3px 7px; margin-bottom: 3px; background: white; font-size: 10px; }
+.achtung-item { border: 0.5px solid #fecaca; border-radius: 6px; padding: 2px 7px; margin-bottom: 2px; background: white; font-size: 10px; }
 .achtung-item .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 1px; }
 .achtung-item .row:last-child { margin-bottom: 0; }
 .achtung-item .falsch { color: #b91c1c; }
@@ -119,17 +119,17 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
   <div class="c-grammatik">
     <div class="section-title">🟩 Grammatik</div>
     <div class="section-body">
-      <div class="gram-rule"><strong>haben + Nomen</strong> (Hunger, Angst, ein Auto) — <strong>sein + Adjektiv</strong> (müde, nervös)</div>
-      <table class="adj-table">
-        <thead><tr><th>Genus/Numerus</th><th>sein + Adjektiv</th><th>haben + Nomen</th></tr></thead>
+      <div class="gram-rule"><strong>Merke:</strong> <strong>sein + Adjektiv</strong> beschreibt einen Zustand / eine Eigenschaft — <strong>haben + Nomen</strong> steht z. B. bei Hunger, Angst oder Besitz.</div>
+      <table class="adj-table contrast-table">
+        <thead><tr><th>SEIN + ADJEKTIV</th><th>HABEN + NOMEN</th></tr></thead>
         <tbody>
-          <tr><td class="g">der (m)</td><td>Der Mann ist müde.</td><td>Der Mann hat Angst.</td></tr>
-          <tr><td class="g">die (f)</td><td>Die Frau ist glücklich.</td><td>Die Frau hat ein Auto.</td></tr>
-          <tr><td class="g">das (n)</td><td>Das Kind ist krank.</td><td>Das Kind hat Geburtstag.</td></tr>
-          <tr><td class="g">Plural</td><td>Die Autos sind klein.</td><td>Die Kinder haben Ferien.</td></tr>
+          <tr><td>Ich bin <strong>müde</strong>.</td><td>Ich habe <strong>Hunger</strong>.</td></tr>
+          <tr><td>Er ist <strong>hungrig</strong>.</td><td>Er hat <strong>Hunger</strong>.</td></tr>
+          <tr><td>Sie ist <strong>nervös</strong>.</td><td>Sie hat <strong>Angst</strong>.</td></tr>
+          <tr><td>Wir sind <strong>glücklich</strong>.</td><td>Wir haben <strong>Glück</strong>.</td></tr>
         </tbody>
       </table>
-      <div class="gram-rule" style="margin-top:2px;">Prädikatives Adjektiv nach „sein": <strong>nie</strong> eine Endung</div>
+      <div class="gram-rule" style="margin-top:2px;"><strong>sein + Adjektiv → keine Endung:</strong> ✅ Ich bin <strong>müde</strong>. &nbsp; ❌ Ich bin <strong>müdes</strong>.</div>
     </div>
   </div>
 
@@ -148,6 +148,7 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
           <div class="satz-pair">
             <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">bin</div><div class="cell erg">müde.</div></div>
             <div class="satz-row"><div class="cell subjekt">Sie</div><div class="cell verb">ist</div><div class="cell erg">glücklich.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Er</div><div class="cell verb">ist</div><div class="cell erg">krank.</div></div>
           </div>
         </div>
         <div class="satz-group">
@@ -155,6 +156,7 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
           <div class="satz-pair">
             <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">habe</div><div class="cell erg">Hunger.</div></div>
             <div class="satz-row"><div class="cell subjekt">Er</div><div class="cell verb">hat</div><div class="cell erg">Durst.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Sie</div><div class="cell verb">hat</div><div class="cell erg">Angst.</div></div>
           </div>
         </div>
         <div class="satz-group">
@@ -162,6 +164,7 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
           <div class="satz-pair">
             <div class="satz-row"><div class="cell subjekt">Ich</div><div class="cell verb">habe</div><div class="cell erg">ein Auto.</div></div>
             <div class="satz-row"><div class="cell subjekt">Sie</div><div class="cell verb">hat</div><div class="cell erg">einen Bruder.</div></div>
+            <div class="satz-row"><div class="cell subjekt">Wir</div><div class="cell verb">haben</div><div class="cell erg">ein Kind.</div></div>
           </div>
         </div>
         <div class="satz-group">
@@ -169,6 +172,7 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
           <div class="satz-pair">
             <div class="satz-row"><div class="cell verb">Hast</div><div class="cell subjekt">du</div><div class="cell erg">Zeit?</div></div>
             <div class="satz-row"><div class="cell verb">Hast</div><div class="cell subjekt">du</div><div class="cell erg">ein Auto?</div></div>
+            <div class="satz-row"><div class="cell verb">Habt</div><div class="cell subjekt">ihr</div><div class="cell erg">Hunger?</div></div>
           </div>
         </div>
       </div>
@@ -218,6 +222,8 @@ table.konj td.irregular { color: #b45309; font-weight: 700; }
       <div class="achtung-item">
         <div class="row"><span class="falsch">❌ Ich habe müde.</span><span class="richtig">✅ Ich bin müde.</span></div>
         <div class="row"><span class="falsch">❌ Ich bin Hunger.</span><span class="richtig">✅ Ich habe Hunger.</span></div>
+        <div class="row"><span class="falsch">❌ Ich habe hungrig.</span><span class="richtig">✅ Ich bin hungrig.</span></div>
+        <div class="row"><span class="falsch">❌ Ich bin Angst.</span><span class="richtig">✅ Ich habe Angst.</span></div>
       </div>
       <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich bin müdes.</span><span class="richtig">✅ Ich bin müde.</span></div></div>
       <div class="achtung-item"><div class="row"><span class="falsch">❌ Ich habe 30 Jahre.</span><span class="richtig">✅ Ich bin 30 Jahre alt.</span></div></div>
